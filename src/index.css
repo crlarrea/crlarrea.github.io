@@ -1,0 +1,116 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(./assets/fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat Semi Bold";
+  src: url(./assets/fonts/Montserrat-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url(./assets/fonts/Montserrat-Bold.ttf);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+  padding: 3rem;
+  scroll-behavior: smooth;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-color: #f3f6fd;
+  display: flex;
+  justify-content: center;
+  border: 2px solid red;
+  border-radius: 10px;
+  padding: 48px;
+  width: 1200px;
+  font-family: "Montserrat";
+}
+
+#root {
+  width: 100%;
+}
+
+header {
+  display: flex;
+}
+
+nav {
+  display: flex;
+  align-items: baseline;
+  flex: 0 1 100%;
+  justify-content: space-between;
+}
+nav ul {
+  display: flex;
+  align-items: baseline;
+  list-style-type: none;
+  column-gap: 72px;
+  font-family: "Montserrat Semi Bold";
+  font-size: 16px;
+  text-transform: capitalize;
+}
+nav ul li {
+  transition: all 0.3s;
+}
+nav ul li:last-of-type {
+  background-color: rgba(46, 91, 255, 0.7);
+  border-radius: 10px;
+}
+nav ul li:last-of-type a {
+  display: block;
+  padding: 10px 48px;
+  color: #f3f6fd;
+}
+nav ul li:last-of-type:hover {
+  background-color: #2e5bff;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #303030;
+}
+nav ul li:not(:last-of-type):hover {
+  transform: scale(1.1);
+}
+nav ul li:not(:last-of-type):hover a {
+  color: #2e5bff;
+}
+
+.open-to-work {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 16px;
+}
+.open-to-work svg {
+  animation: flashingLight 2s infinite ease-out alternate;
+  border-radius: 100%;
+}
+.open-to-work span {
+  font-family: "Montserrat Bold";
+  text-transform: uppercase;
+  color: #6d709d;
+}
+
+@keyframes flashingLight {
+  0% {
+    filter: grayscale(0);
+    box-shadow: 0 0 16px 10px #33c3ba;
+    transform: scale(1.1);
+  }
+  100% {
+    filter: grayscale(1);
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

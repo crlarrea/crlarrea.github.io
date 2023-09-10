@@ -1,0 +1,114 @@
+@import "UISystem";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: $m;
+  padding: 3rem;
+  scroll-behavior: smooth;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-color: $background;
+  display: flex;
+  justify-content: center;
+  border: 2px solid red;
+  border-radius: $xxs;
+  padding: $h;
+  width: 1200px;
+  font: {
+    family: "Montserrat";
+  }
+}
+#root {
+  width: 100%;
+}
+
+header {
+  display: flex;
+}
+
+nav {
+  display: flex;
+  align-items: baseline;
+  flex: 0 1 100%;
+  justify-content: space-between;
+  ul {
+    display: flex;
+    align-items: baseline;
+    list-style-type: none;
+    column-gap: $xh;
+    font: {
+      family: "Montserrat Semi Bold";
+      size: $m;
+    }
+    text: {
+      transform: capitalize;
+    }
+    li {
+      transition: all 0.3s;
+      &:last-of-type {
+        background-color: rgba($primary, 0.7);
+        a {
+          display: block;
+          padding: $xxs $h;
+          color: $background;
+        }
+        border-radius: $xxs;
+        &:hover{
+            background-color: $primary;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: $heading;
+      }
+      &:not(:last-of-type):hover {
+        transform: scale(1.1);
+        a {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+.open-to-work {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: $m;
+  svg {
+    animation: flashingLight 2s infinite ease-out alternate;
+    border-radius: 100%;
+  }
+  span {
+    font: {
+      family: "Montserrat Bold";
+    }
+    text: {
+      transform: uppercase;
+    }
+
+    color: $subheading;
+  }
+}
+
+@keyframes flashingLight {
+  0% {
+    filter: grayscale(0);
+    box-shadow: 0 0 $m $xxs $secondary;
+    transform: scale(1.1);
+  }
+  100% {
+    filter: grayscale(1);
+  }
+}

@@ -1,0 +1,32 @@
+// Colours
+$primary: #2e5bffff;
+$secondary: #33c3baff;
+$heading: #303030ff;
+$subheading: #6d709dff;
+$background: #f3f6fdff;
+
+// Fonts
+@font-face {
+  font-family: "Montserrat";
+  src: url(./assets/fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat Semi Bold";
+  src: url(./assets/fonts/Montserrat-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url(./assets/fonts/Montserrat-Bold.ttf);
+}
+
+// Sizes
+$xxs: 10px;
+$xs: 12px;
+$s: 14px;
+$m: 16px;
+$l: 18px;
+$xl: 21px;
+$xxl: 24px;
+$xxl: 36px;
+$h: 48px;
+$xh: 72px;
