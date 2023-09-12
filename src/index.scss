@@ -10,6 +10,7 @@ html {
   font-size: $m;
   padding: 3rem;
   scroll-behavior: smooth;
+  background-color: $background;
 }
 
 html {
@@ -18,16 +19,22 @@ html {
 }
 
 body {
-  background-color: $background;
   display: flex;
   justify-content: center;
-  border: 2px solid red;
   border-radius: $xxs;
   padding: $h;
   width: 1200px;
   font: {
     family: "Montserrat";
   }
+  background: linear-gradient(
+    200deg,
+    #f6d3d1ff 0%,
+    #f2bbfeff 30%,
+    $background 55%
+  );
+  border: 1px solid rgba($primary, 0.2);
+  box-shadow: 0rem 1rem 1rem 0.5rem rgba($primary, $alpha: 0.1);
 }
 #root {
   width: 100%;
@@ -64,8 +71,8 @@ nav {
           color: $background;
         }
         border-radius: $xxs;
-        &:hover{
-            background-color: $primary;
+        &:hover {
+          background-color: $primary;
         }
       }
       a {
@@ -84,7 +91,6 @@ nav {
 
 .open-to-work {
   display: flex;
-  flex-flow: row wrap;
   column-gap: $m;
   svg {
     animation: flashingLight 2s infinite ease-out alternate;
@@ -102,6 +108,217 @@ nav {
   }
 }
 
+.hero {
+  margin: {
+    top: $xh;
+  }
+  display: flex;
+  article {
+    flex: 1 1 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: $xl;
+    &:first-of-type {
+      p {
+        &:first-of-type {
+          color: $primary;
+          font: {
+            family: "Montserrat Semi Bold";
+            size: $xxl;
+          }
+          text: {
+            transform: uppercase;
+          }
+        }
+        &:last-of-type {
+          color: $subheading;
+          padding: {
+            top: $l;
+          }
+          font: {
+            family: "Montserrat Semi Bold";
+            size: $xl;
+          }
+
+          &::first-letter {
+            text: {
+              transform: capitalize;
+            }
+          }
+        }
+      }
+      h1 {
+        display: inline-flex;
+        flex-flow: column nowrap;
+        text: {
+          transform: capitalize;
+        }
+        font: {
+          family: "Montserrat Bold";
+          size: $xh;
+        }
+        span {
+          text: {
+            transform: uppercase;
+          }
+        }
+      }
+    }
+    &:last-of-type {
+      align-items: center;
+      div {
+        width: 450px;
+      }
+    }
+  }
+}
+
+.about {
+  margin: {
+    top: calc(3 * #{$xh});
+  }
+  display: flex;
+  article {
+    flex: 1 1 50%;
+    display: flex;
+    &:first-of-type {
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 350px;
+        aspect-ratio: 1;
+        filter: grayscale(0.7) drop-shadow(0rem -4rem 5rem rgba($primary, 0.5))
+          drop-shadow(-5rem -5rem 5rem rgba($secondary, 0.7))
+          drop-shadow(5rem -5rem 5rem $tertiary);
+      }
+    }
+    &:last-of-type {
+      flex-flow: column wrap;
+      justify-content: flex-end;
+      row-gap: $l;
+      p {
+        font: {
+          size: $l;
+        }
+        max-width: 40ch;
+      }
+      div {
+        display: flex;
+        column-gap: $m;
+      }
+    }
+  }
+}
+
+.publications {
+  display: flex;
+  flex-flow: column wrap;
+  overflow-x: scroll;
+  margin: {
+    top: calc(3 * #{$xh});
+  }
+  article {
+    display: flex;
+    &:last-of-type {
+      flex-flow: row nowrap;
+      column-gap: $h;
+      overflow: scroll;
+      div {
+        border: 2px solid red;
+        border-radius: $xxs;
+        padding: $h;
+        width: 350px;
+        display: flex;
+        flex-flow: column nowrap;
+        row-gap: $xxs;
+        p {
+          color: $subheading;
+          font: {
+            size: $s;
+          }
+          &:first-of-type {
+            font: {
+              family: "Montserrat Semi Bold";
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.hero ul,
+.about ul {
+  margin: {
+    top: $xxl;
+  }
+  list-style-type: none;
+  display: flex;
+  column-gap: $xl;
+  li {
+    a {
+      transition: all 0.3s;
+      display: inline-flex;
+      color: $primary;
+      padding: $xxs;
+      border: 2px solid $primary;
+      border-radius: 50%;
+      &:hover {
+        background-color: $primary;
+        color: $background;
+      }
+      font: {
+        size: $xl;
+      }
+    }
+  }
+}
+
+.btn {
+  transition: all 0.3s;
+  padding: $s $xxl;
+  text: {
+    decoration: none;
+  }
+  &:first-letter {
+    text: {
+      transform: capitalize;
+    }
+  }
+  border-radius: $xxs;
+  min-width: 100px;
+  height: 50px;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
+  font: {
+    family: "Montserrat Semi Bold";
+  }
+}
+.primary-btn {
+  background-color: $primary;
+  color: $background;
+}
+.secondary-btn {
+  background-color: $background;
+  color: $secondary;
+  border: 2px solid $secondary;
+}
+h2 {
+  font: {
+    family: "Montserrat Bold";
+    size: $h;
+  }
+  text: {
+    transform: capitalize;
+  }
+}
+
+h3 {
+  font: {
+    family: "Montserrat Bold";
+  }
+}
 @keyframes flashingLight {
   0% {
     filter: grayscale(0);

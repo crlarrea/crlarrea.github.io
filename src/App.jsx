@@ -1,15 +1,20 @@
-import { useState } from "react";
 import { Nav } from "./components/Nav";
+import { Hero } from "./components/Hero";
+import { About } from "./components/About";
+import { Publications } from "./components/Publications";
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <>
       <header>
         <Nav/>
       </header>
-      <main></main>
+      <main>
+        <Hero/>
+        <About/>
+        <Publications/>
+      </main>
       <footer></footer>
     </>
   );

@@ -20,6 +20,7 @@ html {
   font-size: 16px;
   padding: 3rem;
   scroll-behavior: smooth;
+  background-color: #f3f6fd;
 }
 
 html {
@@ -28,14 +29,15 @@ html {
 }
 
 body {
-  background-color: #f3f6fd;
   display: flex;
   justify-content: center;
-  border: 2px solid red;
   border-radius: 10px;
   padding: 48px;
   width: 1200px;
   font-family: "Montserrat";
+  background: linear-gradient(200deg, #f6d3d1 0%, #f2bbfe 30%, #f3f6fd 55%);
+  border: 1px solid rgba(46, 91, 255, 0.2);
+  box-shadow: 0rem 1rem 1rem 0.5rem rgba(46, 91, 255, 0.1);
 }
 
 #root {
@@ -89,7 +91,6 @@ nav ul li:not(:last-of-type):hover a {
 
 .open-to-work {
   display: flex;
-  flex-flow: row wrap;
   column-gap: 16px;
 }
 .open-to-work svg {
@@ -100,6 +101,171 @@ nav ul li:not(:last-of-type):hover a {
   font-family: "Montserrat Bold";
   text-transform: uppercase;
   color: #6d709d;
+}
+
+.hero {
+  margin-top: 72px;
+  display: flex;
+}
+.hero article {
+  flex: 1 1 50%;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 21px;
+}
+.hero article:first-of-type p:first-of-type {
+  color: #2e5bff;
+  font-family: "Montserrat Semi Bold";
+  font-size: 36px;
+  text-transform: uppercase;
+}
+.hero article:first-of-type p:last-of-type {
+  color: #6d709d;
+  padding-top: 18px;
+  font-family: "Montserrat Semi Bold";
+  font-size: 21px;
+}
+.hero article:first-of-type p:last-of-type::first-letter {
+  text-transform: capitalize;
+}
+.hero article:first-of-type h1 {
+  display: inline-flex;
+  flex-flow: column nowrap;
+  text-transform: capitalize;
+  font-family: "Montserrat Bold";
+  font-size: 72px;
+}
+.hero article:first-of-type h1 span {
+  text-transform: uppercase;
+}
+.hero article:last-of-type {
+  align-items: center;
+}
+.hero article:last-of-type div {
+  width: 450px;
+}
+
+.about {
+  margin-top: calc(3 * 72px);
+  display: flex;
+}
+.about article {
+  flex: 1 1 50%;
+  display: flex;
+}
+.about article:first-of-type {
+  justify-content: center;
+  align-items: center;
+}
+.about article:first-of-type img {
+  width: 350px;
+  aspect-ratio: 1;
+  filter: grayscale(0.7) drop-shadow(0rem -4rem 5rem rgba(46, 91, 255, 0.5)) drop-shadow(-5rem -5rem 5rem rgba(51, 195, 186, 0.7)) drop-shadow(5rem -5rem 5rem rgba(196, 0, 240, 0.5019607843));
+}
+.about article:last-of-type {
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  row-gap: 18px;
+}
+.about article:last-of-type p {
+  font-size: 18px;
+  max-width: 40ch;
+}
+.about article:last-of-type div {
+  display: flex;
+  column-gap: 16px;
+}
+
+.publications {
+  display: flex;
+  flex-flow: column wrap;
+  overflow-x: scroll;
+  margin-top: calc(3 * 72px);
+}
+.publications article {
+  display: flex;
+}
+.publications article:last-of-type {
+  flex-flow: row nowrap;
+  column-gap: 48px;
+  overflow: scroll;
+}
+.publications article:last-of-type div {
+  border: 2px solid red;
+  border-radius: 10px;
+  padding: 48px;
+  width: 350px;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 10px;
+}
+.publications article:last-of-type div p {
+  color: #6d709d;
+  font-size: 14px;
+}
+.publications article:last-of-type div p:first-of-type {
+  font-family: "Montserrat Semi Bold";
+}
+
+.hero ul,
+.about ul {
+  margin-top: 36px;
+  list-style-type: none;
+  display: flex;
+  column-gap: 21px;
+}
+.hero ul li a,
+.about ul li a {
+  transition: all 0.3s;
+  display: inline-flex;
+  color: #2e5bff;
+  padding: 10px;
+  border: 2px solid #2e5bff;
+  border-radius: 50%;
+  font-size: 21px;
+}
+.hero ul li a:hover,
+.about ul li a:hover {
+  background-color: #2e5bff;
+  color: #f3f6fd;
+}
+
+.btn {
+  transition: all 0.3s;
+  padding: 14px 36px;
+  text-decoration: none;
+  border-radius: 10px;
+  min-width: 100px;
+  height: 50px;
+  opacity: 0.8;
+  font-family: "Montserrat Semi Bold";
+}
+.btn:first-letter {
+  text-transform: capitalize;
+}
+.btn:hover {
+  opacity: 1;
+}
+
+.primary-btn {
+  background-color: #2e5bff;
+  color: #f3f6fd;
+}
+
+.secondary-btn {
+  background-color: #f3f6fd;
+  color: #33c3ba;
+  border: 2px solid #33c3ba;
+}
+
+h2 {
+  font-family: "Montserrat Bold";
+  font-size: 48px;
+  text-transform: capitalize;
+}
+
+h3 {
+  font-family: "Montserrat Bold";
 }
 
 @keyframes flashingLight {
