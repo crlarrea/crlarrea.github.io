@@ -35,7 +35,7 @@ body {
   padding: 48px;
   width: 1200px;
   font-family: "Montserrat";
-  background: linear-gradient(200deg, #f6d3d1 0%, #f2bbfe 30%, #f3f6fd 55%);
+  background: linear-gradient(220deg, #f6d3d1 2%, #f2bbfe 10%, #f3f6fd 45%);
   border: 1px solid rgba(46, 91, 255, 0.2);
   box-shadow: 0rem 1rem 1rem 0.5rem rgba(46, 91, 255, 0.1);
 }
@@ -179,25 +179,58 @@ nav ul li:not(:last-of-type):hover a {
 .publications {
   display: flex;
   flex-flow: column wrap;
-  overflow-x: scroll;
+  row-gap: 18px;
   margin-top: calc(3 * 72px);
+  position: relative;
 }
 .publications article {
   display: flex;
-}
-.publications article:last-of-type {
   flex-flow: row nowrap;
-  column-gap: 48px;
   overflow: scroll;
 }
+.publications article:last-of-type {
+  column-gap: 16px;
+  overflow-x: scroll;
+  width: 100%;
+  padding: 48px 18px;
+  scroll-snap-type: x mandatory;
+}
+.publications article:last-of-type span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: auto;
+  background-color: rgba(51, 195, 186, 0.4);
+  top: 280px;
+  height: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.publications article:last-of-type span:first-of-type {
+  left: -25px;
+}
+.publications article:last-of-type span:last-of-type {
+  right: -25px;
+}
 .publications article:last-of-type div {
-  border: 2px solid red;
+  scroll-snap-align: center;
+  min-width: 350px;
+  border: 1px solid rgba(46, 91, 255, 0.4);
+  box-shadow: 0rem 0rem 1rem 0.5rem rgba(46, 91, 255, 0.1);
   border-radius: 10px;
   padding: 48px;
-  width: 350px;
   display: flex;
   flex-flow: column nowrap;
   row-gap: 10px;
+}
+.publications article:last-of-type div a {
+  text-decoration: none;
+  color: #303030;
+}
+.publications article:last-of-type div a:hover {
+  color: #2e5bff;
 }
 .publications article:last-of-type div p {
   color: #6d709d;

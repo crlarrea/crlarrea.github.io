@@ -28,10 +28,10 @@ body {
     family: "Montserrat";
   }
   background: linear-gradient(
-    200deg,
-    #f6d3d1ff 0%,
-    #f2bbfeff 30%,
-    $background 55%
+    220deg,
+    #f6d3d1ff 2%,
+    #f2bbfeff 10%,
+    $background 45%
   );
   border: 1px solid rgba($primary, 0.2);
   box-shadow: 0rem 1rem 1rem 0.5rem rgba($primary, $alpha: 0.1);
@@ -213,24 +213,59 @@ nav {
 .publications {
   display: flex;
   flex-flow: column wrap;
-  overflow-x: scroll;
+  row-gap: $l;
   margin: {
     top: calc(3 * #{$xh});
   }
+  position: relative;
+
   article {
     display: flex;
+    flex-flow: row nowrap;
+    overflow: scroll;
     &:last-of-type {
-      flex-flow: row nowrap;
-      column-gap: $h;
-      overflow: scroll;
+      column-gap: $m;
+      overflow-x: scroll;
+      width: 100%;
+      padding: $h $l;
+      scroll-snap-type: x mandatory;
+      span {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: auto;
+        background-color: rgba($secondary, $alpha: 0.4);
+        top: 280px;
+        height: 50px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        cursor: pointer;
+        &:first-of-type {
+          left:-25px;
+        }
+        &:last-of-type {
+          right: -25px;
+        }
+      }
+
       div {
-        border: 2px solid red;
+        scroll-snap-align: center;
+        min-width: 350px;
+        border: 1px solid rgba($primary, 0.4);
+        box-shadow: 0rem 0rem 1rem 0.5rem rgba($primary, $alpha: 0.1);
         border-radius: $xxs;
         padding: $h;
-        width: 350px;
         display: flex;
         flex-flow: column nowrap;
         row-gap: $xxs;
+        a {
+          text-decoration: none;
+          color: $heading;
+          &:hover{
+          color: $primary;
+          }
+        }
         p {
           color: $subheading;
           font: {
