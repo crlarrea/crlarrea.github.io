@@ -2,7 +2,7 @@ import React from "react";
 import { OpenToWork } from "./OpenToWork";
 
 export const Nav = () => {
-  const navTitles = ["about", "work", "publications", "training", "contact"];
+  const navTitles = ["work", "publications", "training", "about", "contact"];
   return (
     <nav>
       <OpenToWork props={{ colour: "#33c3baff" }} />

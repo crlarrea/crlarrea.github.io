@@ -302,4 +302,79 @@ const workExperience = [
     ],
   },
 ];
-export { contact, publications, workExperience };
+
+const training = [
+  {
+    course: 'The Complete JavaScript Course 2022: From Zero to Expert!',
+    to: 'may 2022',
+    issuer: 'udemy',
+    issuerCrest: 'udemy.png',
+    credential:
+      'https://udemy-certificate.s3.amazonaws.com/pdf/UC-bf003e46-e611-4835-b388-dbdfb701cadd.pdf',
+    description: ['javascript', 'html', 'css', 'oop', 'ajax', 'npm', 'es6'],
+  },
+  {
+    course: 'JavaScript Algorithms and Data Structures',
+    to: 'may 2021',
+    issuer: 'freeCodeCamp',
+    issuerCrest: 'freecodecamp.png',
+    credential:
+      'https://www.freecodecamp.org/certification/fcc3b3885ac-f95e-447b-a936-c63717d4065d/javascript-algorithms-and-data-structures',
+    description: [
+      'javascript',
+      'regex',
+      'debugging',
+      'data structures',
+      'algorithmic scripting',
+      'oop',
+      'functional programming',
+    ],
+  },
+  {
+    course: 'Responsive Web Design',
+    to: 'mar 2021',
+    issuer: 'freeCodeCamp',
+    issuerCrest: 'freecodecamp.png',
+    credential:
+      'https://udemy-certificate.s3.amazonaws.com/pdf/UC-bf003e46-e611-4835-b388-dbdfb701cadd.pdf',
+    description: [
+      'html',
+      'css',
+      'visual design',
+      'accessibility',
+      'responsive design',
+    ],
+  },
+  {
+    course: 'Python for Data Science',
+    to: 'jun 2019',
+    issuer: 'edx',
+    issuerCrest: 'edx.png',
+    credential: null,
+    description: [
+      'python',
+      'numpy',
+      'pandas',
+      'jupyter notebooks',
+      'statistical analysis',
+      'data visualisation',
+    ],
+  },
+  {
+    course: 'Python for Everybody Specialization',
+    to: 'apr 2015',
+    issuer: 'coursera',
+    issuerCrest: 'coursera.png',
+    credential: null,
+    description: [
+      'python',
+      'json',
+      'xml',
+      'dbms',
+      'data structures',
+      'web scraping',
+      'sql',
+    ],
+  },
+];
+export { contact, publications, workExperience, training };

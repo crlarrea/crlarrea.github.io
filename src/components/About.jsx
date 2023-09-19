@@ -4,7 +4,7 @@ import CV from "../assets/img/christian_larrea.pdf";
 import myPhoto from '../assets/img/me_img.webp';
 export const About = () => {
   return (
-    <section className="about">
+    <section className="about" id='about'>
       <article>
         <img src={myPhoto}/>
       </article>
