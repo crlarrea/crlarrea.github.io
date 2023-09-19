@@ -145,10 +145,14 @@ nav ul li:not(:last-of-type):hover a {
   width: 450px;
 }
 
-.about {
+.about,
+.work {
   margin-top: calc(3 * 72px);
   display: flex;
+  padding-left: 48px;
+  padding-right: 48px;
 }
+
 .about article {
   flex: 1 1 50%;
   display: flex;
@@ -179,6 +183,7 @@ nav ul li:not(:last-of-type):hover a {
 .publications {
   display: flex;
   flex-flow: column wrap;
+  align-items: center;
   row-gap: 18px;
   margin-top: calc(3 * 72px);
   position: relative;
@@ -186,36 +191,46 @@ nav ul li:not(:last-of-type):hover a {
 .publications article {
   display: flex;
   flex-flow: row nowrap;
-  overflow: scroll;
 }
 .publications article:last-of-type {
   column-gap: 16px;
   overflow-x: scroll;
-  width: 100%;
-  padding: 48px 18px;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  width: calc(3 * 350px + 2 * 16px);
+  padding: 48px 0;
   scroll-snap-type: x mandatory;
 }
+.publications article:last-of-type::-webkit-scrollbar {
+  display: none;
+}
+.publications article:last-of-type:hover span {
+  display: flex;
+}
 .publications article:last-of-type span {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: auto;
-  background-color: rgba(51, 195, 186, 0.4);
-  top: 280px;
+  top: 50%;
+  border-radius: 100%;
+  cursor: pointer;
+  background-color: #2e5bff;
   height: 50px;
   aspect-ratio: 1;
-  border-radius: 50%;
-  cursor: pointer;
+  display: none;
+  font-size: 21px;
+  color: #f3f6fd;
 }
-.publications article:last-of-type span:first-of-type {
-  left: -25px;
+.publications article:last-of-type span[data-direction=left] {
+  left: -16px;
 }
-.publications article:last-of-type span:last-of-type {
-  right: -25px;
+.publications article:last-of-type span[data-direction=right] {
+  right: -16px;
 }
 .publications article:last-of-type div {
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   min-width: 350px;
   border: 1px solid rgba(46, 91, 255, 0.4);
   box-shadow: 0rem 0rem 1rem 0.5rem rgba(46, 91, 255, 0.1);
@@ -238,6 +253,77 @@ nav ul li:not(:last-of-type):hover a {
 }
 .publications article:last-of-type div p:first-of-type {
   font-family: "Montserrat Semi Bold";
+}
+
+.work article {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1 1 50%;
+}
+.work article:first-of-type {
+  row-gap: 48px;
+}
+.work article:first-of-type h4 {
+  display: inline-flex;
+  column-gap: 16px;
+  color: #6d709d;
+  text-transform: capitalize;
+  font-size: 21px;
+}
+.work article:first-of-type h4 svg {
+  background-color: #2e5bff;
+  color: #f3f6fd;
+  border-radius: 100%;
+}
+.work article:first-of-type p {
+  margin-left: 36px;
+  color: #6d709d;
+}
+.work article:first-of-type p span {
+  font-family: "Montserrat Semi Bold";
+}
+.work article:first-of-type ul {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 16px;
+  list-style-type: none;
+  border-left: 2px solid #2e5bff;
+}
+.work article:first-of-type ul details {
+  cursor: pointer;
+}
+.work article:first-of-type ul details summary {
+  list-style-type: none;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.work article:first-of-type ul details[open] h4 svg {
+  transform: rotate(90deg);
+  transition: all 0.3s;
+}
+.work article:first-of-type ul li {
+  margin-left: -12px;
+}
+.work article:first-of-type ul ul {
+  border-left: none;
+  color: #6d709d;
+  row-gap: 10px;
+  margin-top: 18px;
+  margin-left: 36px;
+}
+.work article:first-of-type ul ul li {
+  margin-left: 0;
+  display: inline-flex;
+  align-items: baseline;
+  column-gap: 10px;
+}
+.work article:first-of-type ul ul li:before {
+  content: "+";
+  color: #2e5bff;
+}
+.work article:last-of-type {
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .hero ul,
@@ -276,19 +362,23 @@ nav ul li:not(:last-of-type):hover a {
 .btn:first-letter {
   text-transform: capitalize;
 }
-.btn:hover {
-  opacity: 1;
-}
 
 .primary-btn {
   background-color: #2e5bff;
   color: #f3f6fd;
 }
+.primary-btn:hover {
+  opacity: 1;
+}
 
 .secondary-btn {
-  background-color: #f3f6fd;
+  background-color: transparent;
   color: #33c3ba;
   border: 2px solid #33c3ba;
+}
+.secondary-btn:hover {
+  background-color: #33c3ba;
+  color: #f3f6fd;
 }
 
 h2 {
@@ -297,7 +387,8 @@ h2 {
   text-transform: capitalize;
 }
 
-h3 {
+h3,
+h4 {
   font-family: "Montserrat Bold";
 }
 

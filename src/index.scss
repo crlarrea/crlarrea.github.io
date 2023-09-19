@@ -173,11 +173,19 @@ nav {
   }
 }
 
-.about {
+.about,
+.work {
   margin: {
     top: calc(3 * #{$xh});
   }
   display: flex;
+
+  padding: {
+    left: $h;
+    right: $h;
+  }
+}
+.about {
   article {
     flex: 1 1 50%;
     display: flex;
@@ -213,6 +221,7 @@ nav {
 .publications {
   display: flex;
   flex-flow: column wrap;
+  align-items: center;
   row-gap: $l;
   margin: {
     top: calc(3 * #{$xh});
@@ -222,35 +231,50 @@ nav {
   article {
     display: flex;
     flex-flow: row nowrap;
-    overflow: scroll;
     &:last-of-type {
       column-gap: $m;
       overflow-x: scroll;
-      width: 100%;
-      padding: $h $l;
+      /* Hide scrollbar for Chrome, Safari and Opera */
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+      width: calc(3 * 350px + 2 * #{$m});
+      padding: $h 0;
       scroll-snap-type: x mandatory;
+      &:hover {
+        span {
+          display: flex;
+        }
+      }
       span {
-        display: inline-flex;
+        display: flex;
         justify-content: center;
         align-items: center;
         position: absolute;
-        top: auto;
-        background-color: rgba($secondary, $alpha: 0.4);
-        top: 280px;
+        top: 50%;
+        border-radius: 100%;
+        cursor: pointer;
+        background-color: $primary;
         height: 50px;
         aspect-ratio: 1;
-        border-radius: 50%;
-        cursor: pointer;
-        &:first-of-type {
-          left:-25px;
+        display: none;
+        font: {
+          size: $xl;
         }
-        &:last-of-type {
-          right: -25px;
+        color: $background;
+        &[data-direction="left"] {
+          left: -$m;
+        }
+        &[data-direction="right"] {
+          right: -$m;
         }
       }
 
       div {
-        scroll-snap-align: center;
+        scroll-snap-align: start;
         min-width: 350px;
         border: 1px solid rgba($primary, 0.4);
         box-shadow: 0rem 0rem 1rem 0.5rem rgba($primary, $alpha: 0.1);
@@ -262,8 +286,8 @@ nav {
         a {
           text-decoration: none;
           color: $heading;
-          &:hover{
-          color: $primary;
+          &:hover {
+            color: $primary;
           }
         }
         p {
@@ -281,6 +305,98 @@ nav {
     }
   }
 }
+
+.work {
+  
+  article {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1 1 50%;
+    &:first-of-type {
+      row-gap: $h;
+      h4 {
+        display: inline-flex;
+        column-gap: $m;
+        color: $subheading;
+        text: {
+          transform: capitalize;
+        }
+        font: {
+          size: $xl;
+        }
+        svg {
+          background-color: $primary;
+          color: $background;
+          border-radius: 100%;
+        }
+      }
+      p {
+        margin: {
+          left: $xxl;
+        }
+        color: $subheading;
+        span {
+          font: {
+            family: "Montserrat Semi Bold";
+          }
+        }
+      }
+      ul {
+        display: flex;
+        flex-flow: column nowrap;
+        row-gap: $m;
+        list-style-type: none;
+        border-left: 2px solid $primary;
+
+        details {
+          cursor: pointer;
+          summary {
+            list-style-type: none;
+            display: flex;
+            flex-flow: column nowrap;
+          }
+          &[open] {
+            h4 {
+              svg {
+                transform: rotate(90deg);
+                transition: all 0.3s;
+              }
+            }
+          }
+        }
+        li {
+          margin-left: -$xs;
+        }
+        ul {
+          border-left: none;
+          color: $subheading;
+          row-gap: $xxs;
+
+          margin: {
+            top: $l;
+            left: $xxl;
+          }
+          li {
+            margin-left: 0;
+            display: inline-flex;
+            align-items: baseline;
+            column-gap: $xxs;
+            &:before {
+              content: "+";
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+    &:last-of-type {
+      justify-content: flex-end;
+      align-items: center;
+     
+    }
+  }
+}
+
 .hero ul,
 .about ul {
   margin: {
@@ -323,9 +439,7 @@ nav {
   min-width: 100px;
   height: 50px;
   opacity: 0.8;
-  &:hover {
-    opacity: 1;
-  }
+
   font: {
     family: "Montserrat Semi Bold";
   }
@@ -333,11 +447,18 @@ nav {
 .primary-btn {
   background-color: $primary;
   color: $background;
+  &:hover {
+    opacity: 1;
+  }
 }
 .secondary-btn {
-  background-color: $background;
+  background-color: transparent;
   color: $secondary;
   border: 2px solid $secondary;
+  &:hover {
+    background-color: $secondary;
+    color: $background;
+  }
 }
 h2 {
   font: {
@@ -349,7 +470,8 @@ h2 {
   }
 }
 
-h3 {
+h3,
+h4 {
   font: {
     family: "Montserrat Bold";
   }
