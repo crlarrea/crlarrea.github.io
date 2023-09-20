@@ -1,24 +1,23 @@
 import { Nav } from "./components/Nav";
-import { Hero } from "./components/Hero";
-import { About } from "./components/About";
-import { Publications } from "./components/Publications";
-import { Work } from "./components/Work";
-import { Training } from "./components/Training";
+
+import { HelmetProvider } from "react-helmet-async";
+import { Head } from "./utils/Head";
+import { useEffect } from "react";
+import { Rudderstack } from "./utils/Rudderstack";
+import { Home } from "./pages/Home";
+
 function App() {
   return (
-    <>
+    <HelmetProvider>
+      <Head />
       <header>
         <Nav />
       </header>
       <main>
-        <Hero />
-        <About />
-        <Work />
-        <Publications />
-        <Training />
+        <Home />
       </main>
       <footer></footer>
-    </>
+    </HelmetProvider>
   );
 }
 

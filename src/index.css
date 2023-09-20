@@ -35,7 +35,7 @@ body {
   padding: 48px;
   width: 1200px;
   font-family: "Montserrat";
-  background: linear-gradient(220deg, #f6d3d1 2%, #f2bbfe 10%, #f3f6fd 45%);
+  background: linear-gradient(220deg, #f6d3d1 2%, #f2bbfe 10%, #f3f6fd 1000px);
   border: 1px solid rgba(46, 91, 255, 0.2);
   box-shadow: 0rem 1rem 1rem 0.5rem rgba(46, 91, 255, 0.1);
 }
@@ -147,6 +147,7 @@ nav ul li:not(:last-of-type):hover a {
 
 .about,
 .work,
+.publications,
 .training {
   margin-top: calc(5 * 72px);
   display: flex;
@@ -194,13 +195,15 @@ nav ul li:not(:last-of-type):hover a {
   flex-flow: row nowrap;
 }
 .publications article:last-of-type {
-  column-gap: 16px;
+  column-gap: 10px;
   overflow-x: scroll;
   /* Hide scrollbar for Chrome, Safari and Opera */
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-  width: calc(3 * 350px + 2 * 16px);
-  padding: 48px 0;
+  /* IE and Edge */
+  -ms-overflow-style: none;
+  /* Firefox */
+  scrollbar-width: none;
+  width: 100%;
+  padding: 48px;
   scroll-snap-type: x mandatory;
 }
 .publications article:last-of-type::-webkit-scrollbar {
@@ -210,36 +213,7 @@ nav ul li:not(:last-of-type):hover a {
   display: flex;
 }
 .publications article:last-of-type span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
   top: 50%;
-  border-radius: 100%;
-  cursor: pointer;
-  background-color: #2e5bff;
-  height: 50px;
-  aspect-ratio: 1;
-  display: none;
-  font-size: 21px;
-  color: #f3f6fd;
-}
-.publications article:last-of-type span[data-direction=left] {
-  left: -16px;
-}
-.publications article:last-of-type span[data-direction=right] {
-  right: -16px;
-}
-.publications article:last-of-type div {
-  scroll-snap-align: start;
-  min-width: 350px;
-  border: 1px solid rgba(46, 91, 255, 0.4);
-  box-shadow: 0rem 0rem 1rem 0.5rem rgba(46, 91, 255, 0.1);
-  border-radius: 10px;
-  padding: 48px;
-  display: flex;
-  flex-flow: column nowrap;
-  row-gap: 10px;
 }
 .publications article:last-of-type div a {
   text-decoration: none;
@@ -334,23 +308,25 @@ nav ul li:not(:last-of-type):hover a {
 }
 .training article {
   display: flex;
-  column-gap: 18px;
+  column-gap: 10px;
 }
 .training article:first-of-type {
   justify-content: center;
 }
 .training article:last-of-type {
+  padding: 48px;
   overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  /* IE and Edge */
+  -ms-overflow-style: none;
+  /* Firefox */
+  scrollbar-width: none;
   flex-flow: row nowrap;
-  max-width: 100%;
+  width: 100%;
 }
-.training article:last-of-type div {
-  border: 1px solid rgba(46, 91, 255, 0.2);
-  border-radius: 10px;
-  flex: 0 0 350px;
-  padding: 21px;
-  display: flex;
-  flex-flow: column nowrap;
+.training article:last-of-type::-webkit-scrollbar {
+  display: none;
 }
 .training article:last-of-type div p {
   color: #33c3ba;
@@ -395,16 +371,49 @@ nav ul li:not(:last-of-type):hover a {
   color: #303030;
 }
 .training article:last-of-type span {
-  position: absolute;
   top: 60%;
+}
+
+.publications span,
+.training span {
+  position: absolute;
+  background-color: rgba(46, 91, 255, 0.1);
+  transition: all 0.3s;
+  font-size: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  color: #6d709d;
   cursor: pointer;
 }
-.training article:last-of-type span[data-direction=left] {
-  left: 0;
+.publications span[data-direction=left],
+.training span[data-direction=left] {
+  left: -16px;
 }
-.training article:last-of-type span[data-direction=right] {
-  right: 0;
-  background-color: red;
+.publications span[data-direction=right],
+.training span[data-direction=right] {
+  right: -16px;
+}
+.publications span:hover,
+.training span:hover {
+  background-color: #2e5bff;
+  color: #f3f6fd;
+}
+
+.publications article:last-of-type div,
+.training article:last-of-type div {
+  scroll-snap-align: center;
+  flex: 0 0 calc(33% - 0.5 *10px);
+  border: 1px solid rgba(46, 91, 255, 0.4);
+  box-shadow: 0rem 0rem 1rem 0.5rem rgba(46, 91, 255, 0.1);
+  border-radius: 10px;
+  padding: 48px;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 10px;
 }
 
 .hero ul,
