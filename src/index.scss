@@ -22,7 +22,6 @@ body {
   display: flex;
   justify-content: center;
   border-radius: $xxs;
-  padding: $h;
   width: 1200px;
   font: {
     family: "Montserrat";
@@ -45,6 +44,11 @@ header {
 }
 
 nav {
+  margin: {
+    top: $h;
+    left: $xh;
+    right: $xh;
+  }
   display: flex;
   align-items: baseline;
   flex: 0 1 100%;
@@ -111,6 +115,8 @@ nav {
 .hero {
   margin: {
     top: $xh;
+    left: $xh;
+    right: $xh;
   }
   display: flex;
   article {
@@ -179,6 +185,8 @@ nav {
 .training {
   margin: {
     top: calc(5 * #{$xh});
+    left: $h;
+    right: $h;
   }
   display: flex;
 
@@ -250,6 +258,7 @@ nav {
       }
 
       div {
+        padding: $xxl;
         a {
           text-decoration: none;
           color: $heading;
@@ -382,6 +391,7 @@ nav {
       width: 100%;
 
       div {
+        padding: $xl;
         p {
           color: $secondary;
           font: {
@@ -442,6 +452,19 @@ nav {
   }
 }
 
+footer {
+  background-color: $primary;
+  padding: $h;
+  display: flex;
+  border-bottom: {
+    left-radius: $xxs;
+    right-radius: $xxs;
+  }
+
+  h2 {
+    color: $background;
+  }
+}
 .publications span,
 .training span {
   position: absolute;
@@ -477,7 +500,6 @@ nav {
   border: 1px solid rgba($primary, 0.4);
   box-shadow: 0rem 0rem 1rem 0.5rem rgba($primary, $alpha: 0.1);
   border-radius: $xxs;
-  padding: $h;
   display: flex;
   flex-flow: column nowrap;
   row-gap: $xxs;

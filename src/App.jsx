@@ -5,6 +5,7 @@ import { Head } from "./utils/Head";
 import { useEffect } from "react";
 import { Rudderstack } from "./utils/Rudderstack";
 import { Home } from "./pages/Home";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
       <main>
         <Home />
       </main>
-      <footer></footer>
+      <footer>
+        <Footer />
+      </footer>
     </HelmetProvider>
   );
 }

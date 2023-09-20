@@ -32,7 +32,6 @@ body {
   display: flex;
   justify-content: center;
   border-radius: 10px;
-  padding: 48px;
   width: 1200px;
   font-family: "Montserrat";
   background: linear-gradient(220deg, #f6d3d1 2%, #f2bbfe 10%, #f3f6fd 1000px);
@@ -49,6 +48,9 @@ header {
 }
 
 nav {
+  margin-top: 48px;
+  margin-left: 72px;
+  margin-right: 72px;
   display: flex;
   align-items: baseline;
   flex: 0 1 100%;
@@ -105,6 +107,8 @@ nav ul li:not(:last-of-type):hover a {
 
 .hero {
   margin-top: 72px;
+  margin-left: 72px;
+  margin-right: 72px;
   display: flex;
 }
 .hero article {
@@ -150,6 +154,8 @@ nav ul li:not(:last-of-type):hover a {
 .publications,
 .training {
   margin-top: calc(5 * 72px);
+  margin-left: 48px;
+  margin-right: 48px;
   display: flex;
   padding-left: 48px;
   padding-right: 48px;
@@ -214,6 +220,9 @@ nav ul li:not(:last-of-type):hover a {
 }
 .publications article:last-of-type span {
   top: 50%;
+}
+.publications article:last-of-type div {
+  padding: 36px;
 }
 .publications article:last-of-type div a {
   text-decoration: none;
@@ -328,6 +337,9 @@ nav ul li:not(:last-of-type):hover a {
 .training article:last-of-type::-webkit-scrollbar {
   display: none;
 }
+.training article:last-of-type div {
+  padding: 21px;
+}
 .training article:last-of-type div p {
   color: #33c3ba;
   font-size: 18px;
@@ -374,6 +386,17 @@ nav ul li:not(:last-of-type):hover a {
   top: 60%;
 }
 
+footer {
+  background-color: #2e5bff;
+  padding: 48px;
+  display: flex;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+footer h2 {
+  color: #f3f6fd;
+}
+
 .publications span,
 .training span {
   position: absolute;
@@ -410,7 +433,6 @@ nav ul li:not(:last-of-type):hover a {
   border: 1px solid rgba(46, 91, 255, 0.4);
   box-shadow: 0rem 0rem 1rem 0.5rem rgba(46, 91, 255, 0.1);
   border-radius: 10px;
-  padding: 48px;
   display: flex;
   flex-flow: column nowrap;
   row-gap: 10px;
