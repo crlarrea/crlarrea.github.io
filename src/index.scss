@@ -95,12 +95,33 @@ nav {
 
 .open-to-work {
   display: flex;
-  column-gap: $m;
+  column-gap: $xxl;
+  span {
+    position: absolute;
+    display: block;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+
+    &:first-of-type {
+      background-color: $secondary;
+    }
+    &:nth-of-type(2) {
+      background-color: transparent;
+      border: 2px solid $secondary;
+      animation: flashingLight 3s linear 2s infinite;
+    }
+    &:last-of-type {
+      background-color: rgba($secondary, 0.4);
+      animation: flashingLight 2s linear 0s infinite;
+    }
+  }
+
   svg {
     animation: flashingLight 2s infinite ease-out alternate;
     border-radius: 100%;
   }
-  span {
+  p {
     font: {
       family: "Montserrat Bold";
     }
@@ -184,7 +205,7 @@ nav {
 .publications,
 .training {
   margin: {
-    top: calc(5 * #{$xh});
+    top: calc(3 * #{$xh});
     left: $h;
     right: $h;
   }
@@ -205,8 +226,8 @@ nav {
       img {
         width: 350px;
         aspect-ratio: 1;
-        filter: grayscale(0.7) drop-shadow(0rem -4rem 5rem rgba($primary, 0.5))
-          drop-shadow(-5rem -5rem 5rem rgba($secondary, 0.7))
+        filter: grayscale(0.7) drop-shadow(0rem -4rem 5rem rgba($primary, 0.3))
+          drop-shadow(-5rem -5rem 5rem rgba($secondary, 0.4))
           drop-shadow(5rem -5rem 5rem $tertiary);
       }
     }
@@ -453,6 +474,10 @@ nav {
 }
 
 footer {
+  display: flex;
+  margin: {
+    top: $xh;
+  }
   background-color: $primary;
   padding: $h;
   display: flex;
@@ -463,6 +488,110 @@ footer {
 
   h2 {
     color: $background;
+  }
+  article {
+    flex: 1 1 33%;
+    display: flex;
+    &:first-of-type {
+      flex-flow: column nowrap;
+      row-gap: $h;
+      form {
+        position: relative;
+        display: flex;
+        flex-flow: column nowrap;
+        row-gap: $m;
+        flex: 0 0 0.33;
+        input,
+        textarea {
+          outline: none;
+          padding: $s;
+
+          font: {
+            family: "Montserrat Semi Bold";
+            size: $m;
+          }
+          color: $background;
+          border-color: rgba($background, 0.5);
+          border-style: solid;
+          &:focus {
+            border-color: $background;
+          }
+        }
+        input {
+          background-color: transparent;
+          &::placeholder {
+            color: $background;
+          }
+          border: {
+            left: none;
+            right: none;
+            top: none;
+          }
+        }
+        textarea {
+          margin-top: $h;
+          resize: none;
+          background-color: rgba($background, 0.1);
+          border-radius: $xxs;
+          aspect-ratio: 1.628;
+        }
+
+        button {
+          transition: all 0.3s;
+          bottom: $xxs;
+          right: $xxs;
+          position: absolute;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          padding: $xxs;
+          border-radius: $h;
+          background-color: rgba($background, 0.3);
+          color: $background;
+          align-self: flex-end;
+          cursor: pointer;
+          border: none;
+          font: {
+            family: "Montserrat Semi Bold";
+            size: $xxl;
+          }
+          &:hover {
+            color: $heading;
+            background-color: $background;
+          }
+
+          &:disabled {
+            background-color: $secondary;
+            &:hover {
+              color: $background;
+              cursor: not-allowed;
+            }
+          }
+        }
+      }
+    }
+    &:last-of-type {
+      align-items: flex-end;
+      justify-content: flex-end;
+      ul {
+        display: flex;
+
+        list-style-type: none;
+        column-gap: $xl;
+        font: {
+          size: $xl;
+        }
+        li {
+          a {
+            transition: all 0.3s;
+            color: rgba($background, 0.7);
+            &:hover {
+              color: $background;
+            }
+          }
+        }
+      }
+    }
   }
 }
 .publications span,
@@ -586,11 +715,9 @@ h4 {
 }
 @keyframes flashingLight {
   0% {
-    filter: grayscale(0);
-    box-shadow: 0 0 $m $xxs $secondary;
-    transform: scale(1.1);
   }
   100% {
-    filter: grayscale(1);
+    transform: scale(2.5);
+    opacity: 0;
   }
 }

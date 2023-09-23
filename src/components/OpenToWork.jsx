@@ -1,10 +1,14 @@
-import React from 'react'
-import {BsFillCircleFill} from 'react-icons/bs'
-export const OpenToWork = ({props:{colour}}) => {
+import React from "react";
+import { BsFillCircleFill } from "react-icons/bs";
+export const OpenToWork = () => {
   return (
-    <div className='open-to-work'>
-        <BsFillCircleFill color={colour}/>
-        <span>open to work</span>
+    <div className="open-to-work">
+      <div>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <p>open to work</p>
     </div>
-  )
-}
+  );
+};

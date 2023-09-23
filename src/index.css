@@ -93,13 +93,32 @@ nav ul li:not(:last-of-type):hover a {
 
 .open-to-work {
   display: flex;
-  column-gap: 16px;
+  column-gap: 36px;
+}
+.open-to-work span {
+  position: absolute;
+  display: block;
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+}
+.open-to-work span:first-of-type {
+  background-color: #33c3ba;
+}
+.open-to-work span:nth-of-type(2) {
+  background-color: transparent;
+  border: 2px solid #33c3ba;
+  animation: flashingLight 3s linear 2s infinite;
+}
+.open-to-work span:last-of-type {
+  background-color: rgba(51, 195, 186, 0.4);
+  animation: flashingLight 2s linear 0s infinite;
 }
 .open-to-work svg {
   animation: flashingLight 2s infinite ease-out alternate;
   border-radius: 100%;
 }
-.open-to-work span {
+.open-to-work p {
   font-family: "Montserrat Bold";
   text-transform: uppercase;
   color: #6d709d;
@@ -153,7 +172,7 @@ nav ul li:not(:last-of-type):hover a {
 .work,
 .publications,
 .training {
-  margin-top: calc(5 * 72px);
+  margin-top: calc(3 * 72px);
   margin-left: 48px;
   margin-right: 48px;
   display: flex;
@@ -172,7 +191,7 @@ nav ul li:not(:last-of-type):hover a {
 .about article:first-of-type img {
   width: 350px;
   aspect-ratio: 1;
-  filter: grayscale(0.7) drop-shadow(0rem -4rem 5rem rgba(46, 91, 255, 0.5)) drop-shadow(-5rem -5rem 5rem rgba(51, 195, 186, 0.7)) drop-shadow(5rem -5rem 5rem rgba(196, 0, 240, 0.5019607843));
+  filter: grayscale(0.7) drop-shadow(0rem -4rem 5rem rgba(46, 91, 255, 0.3)) drop-shadow(-5rem -5rem 5rem rgba(51, 195, 186, 0.4)) drop-shadow(5rem -5rem 5rem rgba(196, 0, 240, 0.5019607843));
 }
 .about article:last-of-type {
   flex-flow: column wrap;
@@ -387,6 +406,8 @@ nav ul li:not(:last-of-type):hover a {
 }
 
 footer {
+  display: flex;
+  margin-top: 72px;
   background-color: #2e5bff;
   padding: 48px;
   display: flex;
@@ -394,6 +415,97 @@ footer {
   border-bottom-right-radius: 10px;
 }
 footer h2 {
+  color: #f3f6fd;
+}
+footer article {
+  flex: 1 1 33%;
+  display: flex;
+}
+footer article:first-of-type {
+  flex-flow: column nowrap;
+  row-gap: 48px;
+}
+footer article:first-of-type form {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 16px;
+  flex: 0 0 0.33;
+}
+footer article:first-of-type form input,
+footer article:first-of-type form textarea {
+  outline: none;
+  padding: 14px;
+  font-family: "Montserrat Semi Bold";
+  font-size: 16px;
+  color: #f3f6fd;
+  border-color: rgba(243, 246, 253, 0.5);
+  border-style: solid;
+}
+footer article:first-of-type form input:focus,
+footer article:first-of-type form textarea:focus {
+  border-color: #f3f6fd;
+}
+footer article:first-of-type form input {
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+footer article:first-of-type form input::placeholder {
+  color: #f3f6fd;
+}
+footer article:first-of-type form textarea {
+  margin-top: 48px;
+  resize: none;
+  background-color: rgba(243, 246, 253, 0.1);
+  border-radius: 10px;
+  aspect-ratio: 1.628;
+}
+footer article:first-of-type form button {
+  transition: all 0.3s;
+  bottom: 10px;
+  right: 10px;
+  position: absolute;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 48px;
+  background-color: rgba(243, 246, 253, 0.3);
+  color: #f3f6fd;
+  align-self: flex-end;
+  cursor: pointer;
+  border: none;
+  font-family: "Montserrat Semi Bold";
+  font-size: 36px;
+}
+footer article:first-of-type form button:hover {
+  color: #303030;
+  background-color: #f3f6fd;
+}
+footer article:first-of-type form button:disabled {
+  background-color: #33c3ba;
+}
+footer article:first-of-type form button:disabled:hover {
+  color: #f3f6fd;
+  cursor: not-allowed;
+}
+footer article:last-of-type {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+footer article:last-of-type ul {
+  display: flex;
+  list-style-type: none;
+  column-gap: 21px;
+  font-size: 21px;
+}
+footer article:last-of-type ul li a {
+  transition: all 0.3s;
+  color: rgba(243, 246, 253, 0.7);
+}
+footer article:last-of-type ul li a:hover {
   color: #f3f6fd;
 }
 
@@ -505,13 +617,9 @@ h4 {
 }
 
 @keyframes flashingLight {
-  0% {
-    filter: grayscale(0);
-    box-shadow: 0 0 16px 10px #33c3ba;
-    transform: scale(1.1);
-  }
   100% {
-    filter: grayscale(1);
+    transform: scale(2.5);
+    opacity: 0;
   }
 }
 

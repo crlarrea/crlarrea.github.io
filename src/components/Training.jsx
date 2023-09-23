@@ -8,7 +8,7 @@ export const Training = () => {
 
   return (
     <section className="training" id="training">
-      <article >
+      <article>
         <h2>training</h2>
       </article>
       <article ref={trainingCarousell}>
@@ -22,12 +22,12 @@ export const Training = () => {
         </span>
         {training.map((entry, index) => {
           return (
-            <div >
+            <div key={`training-${index}`}>
               <p>{entry.issuer}</p>
               <h4>{entry.course}</h4>
               <ul>
                 {entry.description.map((item, index) => {
-                  return <li>{item}</li>;
+                  return <li key={`training-description-${index}`}>{item}</li>;
                 })}
               </ul>
               {entry.credential ? (
@@ -46,7 +46,6 @@ export const Training = () => {
             scrollCarousell(ev, trainingCarousell);
           }}
         >
-          
           <BsChevronCompactRight />
         </span>
       </article>

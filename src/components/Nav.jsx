@@ -5,7 +5,7 @@ export const Nav = () => {
   const navTitles = ["work", "publications", "training", "about", "contact"];
   return (
     <nav>
-      <OpenToWork props={{ colour: "#33c3baff" }} />
+      <OpenToWork />
       <ul>
         {navTitles.map((entry, index) => {
           return (
