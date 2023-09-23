@@ -157,6 +157,7 @@ nav ul li:not(:last-of-type):hover a {
   text-transform: capitalize;
   font-family: "Montserrat Bold";
   font-size: 72px;
+  font-weight: normal;
 }
 .hero article:first-of-type h1 span {
   text-transform: uppercase;
@@ -297,6 +298,7 @@ nav ul li:not(:last-of-type):hover a {
 }
 .work article:first-of-type ul details summary {
   list-style-type: none;
+  color: transparent;
   display: flex;
   flex-flow: column nowrap;
 }
@@ -608,12 +610,14 @@ footer article:last-of-type ul li a:hover {
 h2 {
   font-family: "Montserrat Bold";
   font-size: 48px;
+  font-weight: normal;
   text-transform: capitalize;
 }
 
 h3,
 h4 {
   font-family: "Montserrat Bold";
+  font-weight: normal;
 }
 
 @keyframes flashingLight {
