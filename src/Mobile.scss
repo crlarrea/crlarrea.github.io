@@ -33,10 +33,13 @@ header{
   
   .hero {
     flex-flow: column nowrap;
-    align-items: center;
+    margin:{
+      right:0;
+    }
     row-gap: $xxl;
 
     article {
+
       &:first-of-type {
         row-gap: 0;
         p {
@@ -58,6 +61,7 @@ header{
         }
       }
       &:last-of-type {
+        align-items: flex-end;
         div {
           width: 200px;
         }
@@ -81,6 +85,9 @@ header{
         }
         p {
           text-align: center;
+          font:{
+            size: $m;
+          }
         }
         div {
           flex-flow: column nowrap;

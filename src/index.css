@@ -646,7 +646,7 @@ h4 {
   }
   .hero {
     flex-flow: column nowrap;
-    align-items: center;
+    margin-right: 0;
     row-gap: 36px;
   }
   .hero article:first-of-type {
@@ -660,6 +660,9 @@ h4 {
   }
   .hero article:first-of-type h1 {
     font-size: 36px;
+  }
+  .hero article:last-of-type {
+    align-items: flex-end;
   }
   .hero article:last-of-type div {
     width: 200px;
@@ -681,6 +684,7 @@ h4 {
   }
   .about article:last-of-type p {
     text-align: center;
+    font-size: 16px;
   }
   .about article:last-of-type div {
     flex-flow: column nowrap;
