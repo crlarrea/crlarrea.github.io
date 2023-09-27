@@ -11,11 +11,9 @@ html {
   padding: 3rem;
   scroll-behavior: smooth;
   background-color: $background;
-}
-
-html {
   display: flex;
   justify-content: center;
+
 }
 
 body {
@@ -556,7 +554,7 @@ footer {
           border: none;
           font: {
             family: "Montserrat Semi Bold";
-            size: $xxl;
+            size: $xl;
           }
           &:hover {
             color: $heading;
@@ -726,3 +724,5 @@ h4 {
     opacity: 0;
   }
 }
+
+@import 'Mobile.scss'

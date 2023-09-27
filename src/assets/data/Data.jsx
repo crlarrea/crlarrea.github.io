@@ -233,7 +233,7 @@ const workExperience = [
     to: "Oct 2019",
     responsibilities: [
       "Provided in-resort customer support holidaymakers concerning local amenities, accommodation, and transport.",
-      "Achieved monthly turNovers of €4000 through sales of excursions, theme parks and shows tickets.",
+      "Achieved monthly targets through sales of excursions, theme parks and shows tickets.",
       "Managed complaints, liaised with hotel management and mediated conflicts",
       "Dealt with cash and credit card payments, reimbursements, and liquidations.",
     ],

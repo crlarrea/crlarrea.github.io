@@ -1,0 +1,190 @@
+// Mobile
+@media screen and (max-width: 600px) {
+  html {
+    padding: 0;
+  }
+  body{
+    width: 100vw;
+    border: none;
+  }
+  body,
+  footer {
+    border-radius: 0;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hero {
+    flex-flow: column nowrap;
+    align-items: center;
+    row-gap:$xxl;
+    
+    article {
+        
+      &:first-of-type {
+        row-gap: 0;
+        p{
+            &:first-of-type{
+            font:{
+                size: $xl;
+            }}
+            &:last-of-type{
+                font:{
+                    size:$m;
+                }
+            }
+        }
+        h1 {
+            font: {
+              size: $xxl;
+            }
+          }
+      }
+      &:last-of-type {
+        div {
+          width: 200px;
+        }
+      }
+    }
+  }
+
+  .about {
+    flex-flow: column nowrap;
+    article{
+        flex: 1 1 100%;
+        &:first-of-type{
+            img{
+                width: 250px;
+            }
+        }
+        &:last-of-type{
+            align-items: center;
+            h2{
+                text-align: center;
+            }
+            p{
+              text-align: center;
+            }
+            div{
+                flex-flow: column nowrap;
+                row-gap:$m;
+                a{
+                    text-align: center;
+                }
+            }
+            ul{
+                justify-content: center;
+            }
+        }
+    }
+  }
+
+  .work{
+    flex-flow: column nowrap;
+    
+    
+    h2{
+        text-align: center;
+    }
+   article{
+    &:first-of-type{
+        
+        h4{
+            font:{
+                size: $m;
+            }
+          }
+          ul{
+            li {
+                margin-left: -$xxs;
+                font:{
+                    size:$s;
+                }
+              }
+                margin:{
+                    left: 0;
+
+                }          left: $xxl;
+
+          }
+    }
+   } 
+  }
+
+  .publications{
+    article{
+      &:last-of-type{
+        span{
+          display: none;
+         
+        }
+        div{
+          flex: 0 0 100%;
+          min-width: 250px;
+         
+        }
+        &:hover {
+          span {
+            display: none;  
+          }
+        }
+      }
+    }
+  }
+
+  .training{
+    display: none;
+  }
+  
+  footer {
+    flex-flow: column nowrap;
+    row-gap: $h;
+    padding: $s;
+    article {
+      flex: 0 0 100%;
+    }
+  }
+
+
+
+
+  .about,
+  .work,
+  .publications,
+  .training {
+    margin: {
+      left: 0;
+      right: 0;
+    }
+    
+  
+    padding: {
+      left: $s;
+      right: $s;
+    }
+  }
+
+
+.hero ul,
+.about ul {
+margin-top: $m;
+  li {
+    
+    a {
+        border-width: 1px;
+      font: {
+        size: $s;
+      }
+    }
+  }
+}
+  h2 {
+    font: {
+      size: $xxl;
+    }
+  }
+
+  
+}
