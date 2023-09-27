@@ -90,6 +90,9 @@ header{
           }
         }
         div {
+          margin:{
+            top: $h;
+          }
           flex-flow: column nowrap;
           row-gap: $m;
           a {
