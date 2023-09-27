@@ -646,7 +646,6 @@ h4 {
   }
   .hero {
     flex-flow: column nowrap;
-    margin-right: 0;
     row-gap: 36px;
   }
   .hero article:first-of-type {
@@ -736,14 +735,15 @@ h4 {
     flex: 0 0 100%;
   }
   nav,
+  .hero,
   .about,
   .work,
   .publications,
   .training {
     margin-left: 0;
     margin-right: 0;
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-left: 36px;
+    padding-right: 36px;
   }
   .hero ul,
   .about ul {

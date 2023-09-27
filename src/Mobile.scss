@@ -33,9 +33,6 @@ header{
   
   .hero {
     flex-flow: column nowrap;
-    margin:{
-      right:0;
-    }
     row-gap: $xxl;
 
     article {
@@ -168,6 +165,7 @@ header{
   }
 
   nav,
+  .hero,
   .about,
   .work,
   .publications,
@@ -178,8 +176,8 @@ header{
     }
 
     padding: {
-      left: $s;
-      right: $s;
+      left: $xxl;
+      right: $xxl;
     }
   }
 
