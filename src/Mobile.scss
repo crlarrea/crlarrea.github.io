@@ -3,7 +3,7 @@
   html {
     padding: 0;
   }
-  body{
+  body {
     width: 100vw;
     border: none;
   }
@@ -11,36 +11,51 @@
   footer {
     border-radius: 0;
   }
-
+header{
+  padding: 0 $xl;
+}
   nav {
-    display: none;
+    ul {
+      display: none;
+    }
   }
 
+  .open-to-work {
+    // display: none;
+    
+        p {
+          font: {
+            size: $xs;
+          }
+        }
+      
+    }
+  
   .hero {
     flex-flow: column nowrap;
     align-items: center;
-    row-gap:$xxl;
-    
+    row-gap: $xxl;
+
     article {
-        
       &:first-of-type {
         row-gap: 0;
-        p{
-            &:first-of-type{
-            font:{
-                size: $xl;
-            }}
-            &:last-of-type{
-                font:{
-                    size:$m;
-                }
-            }
-        }
-        h1 {
+        p {
+          &:first-of-type {
             font: {
-              size: $xxl;
+              size: $xl;
             }
           }
+          &:last-of-type {
+            font: {
+              size: $m;
+            }
+          }
+        }
+        h1 {
+          font: {
+            size: $xxl;
+          }
+        }
       }
       &:last-of-type {
         div {
@@ -52,92 +67,87 @@
 
   .about {
     flex-flow: column nowrap;
-    article{
-        flex: 1 1 100%;
-        &:first-of-type{
-            img{
-                width: 250px;
-            }
+    article {
+      flex: 1 1 100%;
+      &:first-of-type {
+        img {
+          width: 250px;
         }
-        &:last-of-type{
-            align-items: center;
-            h2{
-                text-align: center;
-            }
-            p{
-              text-align: center;
-            }
-            div{
-                flex-flow: column nowrap;
-                row-gap:$m;
-                a{
-                    text-align: center;
-                }
-            }
-            ul{
-                justify-content: center;
-            }
+      }
+      &:last-of-type {
+        align-items: center;
+        h2 {
+          text-align: center;
         }
+        p {
+          text-align: center;
+        }
+        div {
+          flex-flow: column nowrap;
+          row-gap: $m;
+          a {
+            text-align: center;
+          }
+        }
+        ul {
+          justify-content: center;
+        }
+      }
     }
   }
 
-  .work{
+  .work {
     flex-flow: column nowrap;
-    
-    
-    h2{
-        text-align: center;
+
+    h2 {
+      text-align: center;
     }
-   article{
-    &:first-of-type{
-        
-        h4{
-            font:{
-                size: $m;
+    article {
+      &:first-of-type {
+        h4 {
+          font: {
+            size: $m;
+          }
+        }
+        ul {
+          li {
+            margin-left: -$xxs;
+            font: {
+              size: $s;
             }
           }
-          ul{
-            li {
-                margin-left: -$xxs;
-                font:{
-                    size:$s;
-                }
-              }
-                margin:{
-                    left: 0;
-
-                }          left: $xxl;
-
+          margin: {
+            left: 0;
           }
+          left: $xxl;
+        }
+      }
     }
-   } 
   }
 
-  .publications{
-    article{
-      &:last-of-type{
-        span{
+  .publications {
+    article {
+      &:last-of-type {
+        span {
           display: none;
-         
         }
-        div{
+        div {
           flex: 0 0 100%;
           min-width: 250px;
-         
         }
         &:hover {
           span {
-            display: none;  
+            display: none;
           }
         }
       }
     }
   }
 
-  .training{
+  .training {
     display: none;
   }
-  
+
   footer {
     flex-flow: column nowrap;
     row-gap: $h;
@@ -147,9 +157,7 @@
     }
   }
 
-
-
-
+  nav,
   .about,
   .work,
   .publications,
@@ -158,33 +166,28 @@
       left: 0;
       right: 0;
     }
-    
-  
+
     padding: {
       left: $s;
       right: $s;
     }
   }
 
-
-.hero ul,
-.about ul {
-margin-top: $m;
-  li {
-    
-    a {
+  .hero ul,
+  .about ul {
+    margin-top: $m;
+    li {
+      a {
         border-width: 1px;
-      font: {
-        size: $s;
+        font: {
+          size: $s;
+        }
       }
     }
   }
-}
   h2 {
     font: {
       size: $xxl;
     }
   }
-
-  
 }

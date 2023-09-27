@@ -635,8 +635,14 @@ h4 {
   footer {
     border-radius: 0;
   }
-  nav {
+  header {
+    padding: 0 21px;
+  }
+  nav ul {
     display: none;
+  }
+  .open-to-work p {
+    font-size: 12px;
   }
   .hero {
     flex-flow: column nowrap;
@@ -724,6 +730,7 @@ h4 {
   footer article {
     flex: 0 0 100%;
   }
+  nav,
   .about,
   .work,
   .publications,
