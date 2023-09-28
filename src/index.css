@@ -710,26 +710,27 @@ h4 {
     margin-left: -10px;
     font-size: 14px;
   }
-  .publications article:last-of-type span {
+  .publications article:last-of-type span, .training article:last-of-type span {
     display: none;
   }
-  .publications article:last-of-type div {
-    flex: 0 0 100%;
-    min-width: 250px;
+  .publications article:last-of-type div, .training article:last-of-type div {
+    min-width: 280px;
+    padding: 48px 21px;
+    box-shadow: none;
   }
-  .publications article:last-of-type:hover span {
-    display: none;
-  }
-  .training {
+  .publications article:last-of-type:hover span, .training article:last-of-type:hover span {
     display: none;
   }
   footer {
     flex-flow: column nowrap;
     row-gap: 48px;
-    padding: 14px;
+    padding: 48px 14px;
   }
   footer article {
     flex: 0 0 100%;
+  }
+  footer article:last-of-type {
+    justify-content: center;
   }
   nav,
   .hero,

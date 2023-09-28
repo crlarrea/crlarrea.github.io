@@ -19,22 +19,17 @@
   }
 
   .open-to-work {
-    // display: none;
-    
-        p {
-          font: {
-            size: $xs;
-          }
-        }
-      
+    p {
+      font: {
+        size: $xs;
+      }
     }
-  
+  }
+
   .hero {
     flex-flow: column nowrap;
     row-gap: $xxl;
-
     article {
-
       &:first-of-type {
         row-gap: 0;
         p {
@@ -80,12 +75,12 @@
         }
         p {
           text-align: center;
-          font:{
+          font: {
             size: $m;
           }
         }
         div {
-          margin:{
+          margin: {
             top: $h;
           }
           flex-flow: column nowrap;
@@ -130,15 +125,16 @@
     }
   }
 
-  .publications {
+  .publications, .training {
     article {
       &:last-of-type {
         span {
           display: none;
         }
         div {
-          flex: 0 0 100%;
-          min-width: 250px;
+          min-width: 280px;
+          padding: $h $xl;
+          box-shadow: none;
         }
         &:hover {
           span {
@@ -149,16 +145,17 @@
     }
   }
 
-  .training {
-    display: none;
-  }
+
 
   footer {
     flex-flow: column nowrap;
     row-gap: $h;
-    padding: $s;
+    padding: $h $s;
     article {
       flex: 0 0 100%;
+      &:last-of-type{
+        justify-content: center;
+      }
     }
   }
 
