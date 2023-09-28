@@ -417,7 +417,7 @@ footer h2 {
   color: #f3f6fd;
 }
 footer article {
-  flex: 1 1 33%;
+  flex: 1 1 100%;
   display: flex;
 }
 footer article:first-of-type {
@@ -429,7 +429,6 @@ footer article:first-of-type form {
   display: flex;
   flex-flow: column nowrap;
   row-gap: 16px;
-  flex: 0 0 0.33;
 }
 footer article:first-of-type form input,
 footer article:first-of-type form textarea {
@@ -623,7 +622,100 @@ h4 {
     opacity: 0;
   }
 }
-@media screen and (max-width: 600px) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  html {
+    padding: 0;
+  }
+  body {
+    width: 100vw;
+    border: none;
+  }
+  body,
+  footer {
+    border-radius: 0;
+  }
+  nav {
+    flex-flow: column nowrap;
+    align-items: center;
+    row-gap: 48px;
+    margin-bottom: 72px;
+  }
+  nav ul li:last-of-type {
+    background-color: transparent;
+  }
+  nav ul li:last-of-type a {
+    display: block;
+    padding: 0 0;
+    color: #303030;
+  }
+  nav ul li:last-of-type:hover {
+    background-color: transparent;
+  }
+  nav ul li:last-of-type:last-of-type:hover {
+    transform: scale(1.1);
+  }
+  nav ul li:last-of-type:last-of-type:hover a {
+    color: #2e5bff;
+    background-color: transparent;
+  }
+  .open-to-work {
+    flex-flow: column nowrap;
+    align-items: center;
+    row-gap: 36px;
+  }
+  .hero {
+    flex-flow: column nowrap;
+  }
+  .hero article:first-of-type p {
+    max-width: 40ch;
+  }
+  .hero article:last-of-type {
+    align-items: flex-end;
+  }
+  .hero article:last-of-type div {
+    margin-top: -72px;
+  }
+  .hero article:last-of-type div div {
+    width: 350px;
+  }
+  .work {
+    flex-flow: column nowrap;
+  }
+  .work article:last-of-type div div {
+    width: 350px;
+  }
+  .publications article:last-of-type span, .training article:last-of-type span {
+    display: none;
+  }
+  .publications article:last-of-type div, .training article:last-of-type div {
+    min-width: 280px;
+    padding: 48px 21px;
+    box-shadow: none;
+  }
+  .publications article:last-of-type:hover span, .training article:last-of-type:hover span {
+    display: none;
+  }
+  footer article {
+    flex: auto;
+  }
+  footer article:first-of-type {
+    flex: 1 1 66%;
+  }
+  .about {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  .btn {
+    text-align: center;
+    text-transform: capitalize;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (min-device-width: 220px) and (max-device-width: 767px) {
   html {
     padding: 0;
   }

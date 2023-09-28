@@ -1,0 +1,139 @@
+// Tablet
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  html {
+    padding: 0;
+  }
+  body {
+    width: 100vw;
+    border: none;
+  }
+  body,
+  footer {
+    border-radius: 0;
+  }
+
+  nav {
+    flex-flow: column nowrap;
+    align-items: center;
+    row-gap: $h;
+    margin:{
+        bottom: $xh;
+    }
+    ul {
+      li {
+        &:last-of-type {
+          a {
+            display: block;
+            padding: 0 0;
+            color: $heading;
+          }
+          background-color: transparent;
+          &:hover {
+            background-color: transparent;
+          }
+          &:last-of-type {
+            &:hover {
+              transform: scale(1.1);
+              a {
+                color: $primary;
+                background-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .open-to-work {
+    flex-flow: column nowrap;
+    align-items: center;
+    row-gap: $xxl;
+  }
+  .hero {
+    flex-flow: column nowrap;
+    article {
+      &:first-of-type {
+        p {
+          max-width: 40ch;
+        }
+      }
+      &:last-of-type {
+        align-items: flex-end;
+        div {
+          margin: {
+            top: -$xh;
+          }
+          div {
+            width: 350px;
+          }
+        }
+      }
+    }
+  }
+
+  .work {
+    flex-flow: column nowrap;
+    article{
+        &:last-of-type{
+            div{
+                div{
+                    width:350px;
+                }
+            }
+        }
+    }
+  }
+  
+  .publications, .training {
+    article {
+      &:last-of-type {
+        span {
+          display: none;
+        }
+        div {
+          min-width: 280px;
+          padding: $h $xl;
+          box-shadow: none;
+        }
+        &:hover {
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    article {
+      flex: auto;
+
+      &:first-of-type {
+        flex: 1 1 66%;
+      }
+    }
+  }
+
+  .about {
+    margin: {
+      left: 0;
+      right: 0;
+    }
+
+    padding: {
+      left: $xxl;
+      right: $xxl;
+    }
+  }
+
+  .btn {
+    text: {
+      align: center;
+      transform: capitalize;
+    }
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

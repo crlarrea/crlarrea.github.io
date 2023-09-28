@@ -491,7 +491,7 @@ footer {
     color: $background;
   }
   article {
-    flex: 1 1 33%;
+    flex: 1 1 100%;
     display: flex;
     &:first-of-type {
       flex-flow: column nowrap;
@@ -501,7 +501,6 @@ footer {
         display: flex;
         flex-flow: column nowrap;
         row-gap: $m;
-        flex: 0 0 0.33;
         input,
         textarea {
           outline: none;
@@ -725,4 +724,5 @@ h4 {
   }
 }
 
-@import 'Mobile.scss'
+@import 'Tablet.scss';
+@import 'Mobile.scss';
