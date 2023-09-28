@@ -688,7 +688,7 @@ h4 {
     display: none;
   }
   .publications article:last-of-type div, .training article:last-of-type div {
-    min-width: 280px;
+    min-width: 350px;
     padding: 48px 21px;
     box-shadow: none;
   }
