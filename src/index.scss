@@ -583,10 +583,22 @@ footer {
         }
         li {
           a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
             transition: all 0.3s;
             color: rgba($background, 0.7);
+            padding: $xxs;
+            border-radius: $h;
+            background-color: rgba($background, 0.3);
+           
+            font: {
+              family: "Montserrat Semi Bold";
+              size: $l;
+            }
             &:hover {
-              color: $background;
+              color: $heading;
+              background-color: $background;
             }
           }
         }

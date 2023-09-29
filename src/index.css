@@ -500,11 +500,20 @@ footer article:last-of-type ul {
   font-size: 21px;
 }
 footer article:last-of-type ul li a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   transition: all 0.3s;
   color: rgba(243, 246, 253, 0.7);
+  padding: 10px;
+  border-radius: 48px;
+  background-color: rgba(243, 246, 253, 0.3);
+  font-family: "Montserrat Semi Bold";
+  font-size: 18px;
 }
 footer article:last-of-type ul li a:hover {
-  color: #f3f6fd;
+  color: #303030;
+  background-color: #f3f6fd;
 }
 
 .publications span,
@@ -803,15 +812,18 @@ h4 {
     margin-left: -10px;
     font-size: 14px;
   }
-  .publications article:last-of-type span, .training article:last-of-type span {
+  .publications article:last-of-type span,
+  .training article:last-of-type span {
     display: none;
   }
-  .publications article:last-of-type div, .training article:last-of-type div {
+  .publications article:last-of-type div,
+  .training article:last-of-type div {
     min-width: 280px;
     padding: 48px 21px;
     box-shadow: none;
   }
-  .publications article:last-of-type:hover span, .training article:last-of-type:hover span {
+  .publications article:last-of-type:hover span,
+  .training article:last-of-type:hover span {
     display: none;
   }
   footer {
@@ -843,6 +855,9 @@ h4 {
   .hero ul li a,
   .about ul li a {
     border-width: 1px;
+    font-size: 14px;
+  }
+  footer article:last-of-type ul li a {
     font-size: 14px;
   }
   h2 {
