@@ -5,6 +5,7 @@ import { Publications } from "../components/Publications";
 import { Work } from "../components/Work";
 import { Training } from "../components/Training";
 import { Rudderstack } from "../utils/Rudderstack";
+import { Projects } from "../components/Projects";
 export const Home = () => {
   useEffect(() => {
     rudderanalytics.page(window.title);
@@ -14,6 +15,7 @@ export const Home = () => {
       <Hero />
       <About />
       <Work />
+      <Projects/>
       <Publications />
       <Training />
     </>

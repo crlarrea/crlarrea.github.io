@@ -399,6 +399,30 @@ const training = [
   },
 ];
 
+const projects = [
+  {
+    name: "long lane",
+    description: "A digital analytics agency landing page.",
+    tags: ["react", "js", "html", "css", "rudderstack"],
+    image: null,
+    link: "https://long-lane.onrender.com",
+  },
+  {
+    name: "angus cat rescue",
+    description: "Cat rescue web app.",
+    tags: ["react", "js", "html", "css"],
+    image: null,
+    link: null,
+  },
+  {
+    name: "BFC",
+    description: "Broughty Ferry Community landing page.",
+    tags: ["react", "js", "html", "css"],
+    image: null,
+    link: null,
+  },
+];
+
 const keys = { web3forms: "db402685-15ef-4d07-a871-0a87e03e899d" };
 
-export { contact, publications, workExperience, training, keys };
+export { contact, publications, workExperience, training, projects, keys };

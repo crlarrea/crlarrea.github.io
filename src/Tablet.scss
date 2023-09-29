@@ -84,7 +84,16 @@
         }
     }
   }
-  
+  .projects{
+    article{
+      &:last-of-type{
+        width: 100%;
+        overflow: scroll;
+        @include hideScrollbar;
+        
+      }
+    }
+  }
   .publications, .training {
     article {
       &:last-of-type {

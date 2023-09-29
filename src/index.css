@@ -168,6 +168,7 @@ nav ul li:not(:last-of-type):hover a {
 
 .about,
 .work,
+.projects,
 .publications,
 .training {
   margin-top: calc(3 * 72px);
@@ -402,6 +403,49 @@ nav ul li:not(:last-of-type):hover a {
 }
 .training article:last-of-type span {
   top: 60%;
+}
+
+.projects {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  row-gap: 48px;
+}
+.projects article {
+  flex: 0 0 100%;
+  display: flex;
+  column-gap: 18px;
+}
+.projects article:last-of-type div {
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 10px;
+  justify-content: space-between;
+  padding: 18px 21px;
+  border: 1px solid rgba(48, 48, 48, 0.2);
+  border-radius: 10px;
+}
+.projects article:last-of-type div a {
+  font-size: 21px;
+  font-family: "Montserrat Bold";
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #2e5bff;
+}
+.projects article:last-of-type div p {
+  color: #6d709d;
+  font-size: 16px;
+  max-width: 20ch;
+}
+.projects article:last-of-type div ul {
+  list-style-type: none;
+  display: flex;
+  column-gap: 10px;
+  font-size: 14px;
+}
+.projects article:last-of-type div ul li:before {
+  content: "#";
+  color: #2e5bff;
 }
 
 footer {
@@ -693,6 +737,18 @@ h4 {
   .work article:last-of-type div div {
     width: 350px;
   }
+  .projects article:last-of-type {
+    width: 100%;
+    overflow: scroll;
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    /* IE and Edge */
+    -ms-overflow-style: none;
+    /* Firefox */
+    scrollbar-width: none;
+  }
+  .projects article:last-of-type::-webkit-scrollbar {
+    display: none;
+  }
   .publications article:last-of-type span, .training article:last-of-type span {
     display: none;
   }
@@ -812,6 +868,18 @@ h4 {
     margin-left: -10px;
     font-size: 14px;
   }
+  .projects article:last-of-type {
+    width: 100%;
+    overflow: scroll;
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    /* IE and Edge */
+    -ms-overflow-style: none;
+    /* Firefox */
+    scrollbar-width: none;
+  }
+  .projects article:last-of-type::-webkit-scrollbar {
+    display: none;
+  }
   .publications article:last-of-type span,
   .training article:last-of-type span {
     display: none;
@@ -841,6 +909,7 @@ h4 {
   .hero,
   .about,
   .work,
+  .projects,
   .publications,
   .training {
     margin-left: 0;

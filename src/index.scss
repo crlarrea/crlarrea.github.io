@@ -13,7 +13,6 @@ html {
   background-color: $background;
   display: flex;
   justify-content: center;
-
 }
 
 body {
@@ -201,6 +200,7 @@ nav {
 
 .about,
 .work,
+.projects,
 .publications,
 .training {
   margin: {
@@ -474,6 +474,65 @@ nav {
   }
 }
 
+.projects {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  row-gap: $h;
+  article {
+    flex: 0 0 100%;
+    display: flex;
+    column-gap:$l;
+    &:last-of-type {
+      div {
+        display: flex;
+        flex-flow: column wrap;
+        row-gap:$xxs;
+        justify-content: space-between;
+        
+        padding: $l $xl;
+  
+        a {
+          font: {
+            size: $xl;
+            family: "Montserrat Bold";
+          }
+          text: {
+            transform: capitalize;
+            decoration: none;
+          }
+          color: $primary;
+        }
+        p{
+          color:$subheading;
+          font:{
+            size: $m;
+          }
+          max-width: 20ch;
+        }
+        ul{
+          list-style-type: none;
+          display: flex;
+          column-gap:$xxs;
+          
+          font:{
+            size:$s;
+          }
+          li{
+            &:before{
+              content: '#';
+              color: $primary;
+            }
+          }
+        }
+        border: 1px solid rgba($heading, 0.2);
+        border-radius: $xxs;
+
+      }
+    }
+  }
+}
+
 footer {
   display: flex;
   margin: {
@@ -591,7 +650,7 @@ footer {
             padding: $xxs;
             border-radius: $h;
             background-color: rgba($background, 0.3);
-           
+
             font: {
               family: "Montserrat Semi Bold";
               size: $l;
@@ -736,5 +795,5 @@ h4 {
   }
 }
 
-@import 'Tablet.scss';
-@import 'Mobile.scss';
+@import "Tablet.scss";
+@import "Mobile.scss";
