@@ -1,3 +1,4 @@
+import thesis from '../img/christian_larrea_thesis.pdf'
 import {
   FaLinkedinIn,
   FaOrcid,
@@ -71,7 +72,7 @@ const publications = [
     authors: ["Christian R. Larrea"],
     journal: "PhD Thesis (2018)",
     year: 2018,
-    link: "../src/assets/img/christian_larrea_thesis.pdf",
+    link: thesis,
   },
 
   {
