@@ -135,9 +135,14 @@
   .projects{
     article{
       &:last-of-type{
-        width: 100%;
+        width: 100vw;
         overflow: scroll;
         @include hideScrollbar;
+        padding: 0 $m;
+        div{
+          width: 100%;
+          scroll-snap-stop: always;
+        }
         
       }
     }
@@ -153,6 +158,7 @@
           min-width: 280px;
           padding: $h $xl;
           box-shadow: none;
+          scroll-snap-stop: always;
         }
         &:hover {
           span {

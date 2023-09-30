@@ -484,12 +484,12 @@ nav {
     display: flex;
     column-gap:$l;
     &:last-of-type {
+
       div {
         display: flex;
         flex-flow: column wrap;
         row-gap:$xxs;
         justify-content: space-between;
-        
         padding: $l $xl;
   
         a {
