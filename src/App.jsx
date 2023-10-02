@@ -17,9 +17,9 @@ function App() {
       <main>
         <Home />
       </main>
-      <footer>
+      <footer id="contact"> 
         <Footer />
-      </footer>
+      </footer >
     </HelmetProvider>
   );
 }

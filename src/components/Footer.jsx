@@ -4,7 +4,7 @@ import { contact } from "../assets/data/Data";
 export const Footer = () => {
   return (
     <>
-      <article id="contact">
+      <article>
         <h2>contact</h2>
         <ContactForm />
       </article>
