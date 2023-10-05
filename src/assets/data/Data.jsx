@@ -420,7 +420,7 @@ const projects = [
     description: "Broughty Ferry Community landing page.",
     tags: ["react", "js", "html", "css"],
     image: null,
-    link: null,
+    link: 'https://broughty-ferry-community.onrender.com/',
   },
 ];
 
