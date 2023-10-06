@@ -1,4 +1,4 @@
-import thesis from '../img/christian_larrea_thesis.pdf'
+import thesis from "../img/christian_larrea_thesis.pdf";
 import {
   FaLinkedinIn,
   FaOrcid,
@@ -413,14 +413,14 @@ const projects = [
     description: "Cat rescue web app.",
     tags: ["react", "js", "html", "css"],
     image: null,
-    link: null,
+    link: "https://angus-nig8.onrender.com/adoption",
   },
   {
     name: "BFC",
     description: "Broughty Ferry Community landing page.",
     tags: ["react", "js", "html", "css"],
     image: null,
-    link: 'https://broughty-ferry-community.onrender.com/',
+    link: "https://broughty-ferry-community.onrender.com/",
   },
 ];
 
