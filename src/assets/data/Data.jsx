@@ -413,7 +413,7 @@ const projects = [
     description: "Cat rescue web app.",
     tags: ["react", "js", "html", "css"],
     image: null,
-    link: "https://angus-nig8.onrender.com/adoption",
+    link: "https://angus-nig8.onrender.com",
   },
   {
     name: "BFC",
