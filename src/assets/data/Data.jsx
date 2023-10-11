@@ -413,7 +413,7 @@ const projects = [
     description: "Landing page for a product display.",
     tags: ["react", "js", "html", "css"],
     image: null,
-    link: "https://lucky-cats.onrender.com/'
+    link: "https://lucky-cats.onrender.com/"
   },
   {
     name: "BFC",
