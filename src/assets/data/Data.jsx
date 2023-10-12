@@ -416,6 +416,13 @@ const projects = [
     link: "https://lucky-cats.onrender.com/"
   },
   {
+    name: "anime characters",
+    description: "Catalogue of anime characters.",
+    tags: ["react", "js", "html", "css"],
+    image: null,
+    link: "https://anime-characters.onrender.com/"
+  },
+  {
     name: "BFC",
     description: "Broughty Ferry Community landing page.",
     tags: ["react", "js", "html", "css"],
