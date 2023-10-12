@@ -429,13 +429,13 @@ const projects = [
     image: null,
     link: "https://broughty-ferry-community.onrender.com/",
   },
-  {
-    name: "angus cat rescue",
-    description: "Cat rescue web app.",
-    tags: ["react", "js", "html", "css"],
-    image: null,
-    link: "https://angus-nig8.onrender.com",
-  },
+  // {
+  //   name: "angus cat rescue",
+  //   description: "Cat rescue web app.",
+  //   tags: ["react", "js", "html", "css"],
+  //   image: null,
+  //   link: "https://angus-nig8.onrender.com",
+  // },
  
 ];
 
