@@ -414,7 +414,9 @@ nav ul li:not(:last-of-type):hover a {
 .projects article {
   flex: 0 0 100%;
   display: flex;
+  flex-flow: row wrap;
   column-gap: 18px;
+  row-gap: 18px;
 }
 .projects article:last-of-type div {
   display: flex;

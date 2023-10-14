@@ -482,7 +482,9 @@ nav {
   article {
     flex: 0 0 100%;
     display: flex;
+    flex-flow: row wrap;
     column-gap:$l;
+    row-gap:$l;
     &:last-of-type {
 
       div {

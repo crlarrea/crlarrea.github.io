@@ -422,6 +422,13 @@ const projects = [
     image: null,
     link: "https://anime-characters.onrender.com/"
   },
+    {
+    name: "ghibli films",
+    description: "List of Ghibli Studios films.",
+    tags: ["react", "js", "html", "css"],
+    image: null,
+    link: "https://ghibli.onrender.com",
+  },
   {
     name: "BFC",
     description: "Broughty Ferry Community landing page.",
