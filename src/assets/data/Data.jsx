@@ -409,6 +409,13 @@ const projects = [
     link: "https://long-lane.onrender.com",
   },
   {
+    name: "Slayyyter",
+    description: "Slayyyter landing page.",
+    tags: ["react", "js", "html", "css"],
+    image: null,
+    link: "https://slayyyter.onrender.com/",
+  },
+  {
     name: "lucky cats",
     description: "Landing page for a product display.",
     tags: ["react", "js", "html", "css"],
