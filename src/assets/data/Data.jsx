@@ -404,14 +404,14 @@ const projects = [
   {
     name: "long lane",
     description: "A digital analytics agency landing page.",
-    tags: ["react", "js", "html", "css", "rudderstack"],
+    tags: ["react", "hooks", "js", "html", "css", "rudderstack", "forms"],
     image: null,
     link: "https://long-lane.onrender.com",
   },
   {
     name: "Slayyyter",
     description: "Slayyyter landing page.",
-    tags: ["react", "js", "html", "css"],
+    tags: ["react", "hooks", "js", "html", "css"],
     image: null,
     link: "https://slayyyter.onrender.com/",
   },
@@ -420,19 +420,19 @@ const projects = [
     description: "Landing page for a product display.",
     tags: ["react", "js", "html", "css"],
     image: null,
-    link: "https://lucky-cats.onrender.com/"
+    link: "https://lucky-cats.onrender.com/",
   },
   {
     name: "anime characters",
     description: "Catalogue of anime characters.",
-    tags: ["react", "js", "html", "css"],
+    tags: ["react", "js", "html", "css", "infinite scrolling"],
     image: null,
-    link: "https://anime-characters.onrender.com/"
+    link: "https://anime-characters.onrender.com/",
   },
-    {
+  {
     name: "ghibli films",
     description: "List of Ghibli Studios films.",
-    tags: ["react", "js", "html", "css"],
+    tags: ["react", "hooks", "js", "html", "css"],
     image: null,
     link: "https://ghibli.onrender.com",
   },
@@ -450,7 +450,6 @@ const projects = [
   //   image: null,
   //   link: "https://angus-nig8.onrender.com",
   // },
- 
 ];
 
 const keys = { web3forms: "db402685-15ef-4d07-a871-0a87e03e899d" };
