@@ -6,6 +6,7 @@ export const Head = () => {
     <Helmet>
       <title>Christian Larrea</title>
       <script>{Rudderstack.toString()}</script>
+      <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/ffb7659c9a8230d7c509cd70/script.js"></script>
     </Helmet>
   );
 };
