@@ -442,6 +442,7 @@ nav ul li:not(:last-of-type):hover a {
 .projects article:last-of-type div ul {
   list-style-type: none;
   display: flex;
+  flex-flow: row wrap;
   column-gap: 10px;
   font-size: 14px;
 }
