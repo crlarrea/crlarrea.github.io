@@ -304,6 +304,22 @@ const workExperience = [
 
 const training = [
   {
+    course: "SQL for Data Analysis",
+    to: "Dec 2023",
+    issuer: "Udacity",
+    issuerCrest: null,
+    credential: null,
+    description: [
+     "basic SQL",
+     "SQL joins",
+     "SQL aggregations",
+     "SQL subqueries & temporary tables",
+     "SQL data cleaning",
+     "SQL window functions",
+     "SQL, advanced joins & performance tuning"
+    ],
+  },
+  {
     course: "Analytics Academy",
     to: "Dec 2022",
     issuer: "Segment",
