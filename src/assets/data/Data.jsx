@@ -311,12 +311,12 @@ const training = [
     credential: null,
     description: [
      "basic SQL",
-     "SQL joins",
-     "SQL aggregations",
-     "SQL subqueries & temporary tables",
-     "SQL data cleaning",
-     "SQL window functions",
-     "SQL, advanced joins & performance tuning"
+     "joins",
+     "aggregations",
+     "subqueries & temporary tables",
+     "data cleaning",
+     "window functions",
+     "advanced joins & performance tuning"
     ],
   },
   {
