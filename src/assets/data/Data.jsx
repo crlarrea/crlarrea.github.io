@@ -304,6 +304,20 @@ const workExperience = [
 
 const training = [
   {
+    course: "dbt Fundamentals",
+    to: "Jan 2024",
+    issuer: "dbt Labs",
+    issuerCrest: null,
+    credential: 'https://www.credential.net/a18d2ce3-5cc1-4351-97ad-e26c961325c6#gs.3bp5m9',
+    description: [
+     'models',
+     'sources',
+     'tests',
+     'documentation',
+     'deployment'
+    ],
+  },
+  {
     course: "SQL for Data Analysis",
     to: "Dec 2023",
     issuer: "Udacity",
