@@ -6,10 +6,12 @@ import { useEffect } from "react";
 import { Rudderstack } from "./utils/Rudderstack";
 import { Home } from "./pages/Home";
 import { Footer } from "./components/Footer";
+import { GTMnoScript } from "./utils/GTMnoScript";
 
 function App() {
   return (
     <HelmetProvider>
+      <GTMnoScript/>
       <Head />
       <header>
         <Nav />
