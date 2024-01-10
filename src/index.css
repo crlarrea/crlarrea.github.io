@@ -832,6 +832,7 @@ h4 {
   }
   .about article:first-of-type img {
     width: 250px;
+    height: auto;
   }
   .about article:last-of-type {
     align-items: center;
