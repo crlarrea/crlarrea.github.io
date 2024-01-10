@@ -6,7 +6,7 @@ export const About = () => {
   return (
     <section className="about" id='about'>
       <article>
-        <img src={myPhoto}/>
+        <img src={myPhoto} alt='Me'/>
       </article>
       <article>
         <h2>about me</h2>
@@ -30,7 +30,7 @@ export const About = () => {
             )
             .map((entry, index) => (
               <li key={`hero-contact-${index}`}>
-                <a href={entry.link} target="_blank">
+                <a href={entry.link} target="_blank" aria-label={entry.type}>
                   {entry.icon}
                 </a>
               </li>

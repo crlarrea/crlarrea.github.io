@@ -188,8 +188,8 @@ nav ul li:not(:last-of-type):hover a {
   align-items: center;
 }
 .about article:first-of-type img {
-  width: 350px;
-  aspect-ratio: 1;
+  width: 348px;
+  height: 350px;
   filter: grayscale(0.7) drop-shadow(0rem -4rem 5rem rgba(46, 91, 255, 0.3)) drop-shadow(-5rem -5rem 5rem rgba(51, 195, 186, 0.4)) drop-shadow(5rem -5rem 5rem rgba(196, 0, 240, 0.5019607843));
 }
 .about article:last-of-type {
@@ -265,14 +265,14 @@ nav ul li:not(:last-of-type):hover a {
 .work article:first-of-type {
   row-gap: 48px;
 }
-.work article:first-of-type h4 {
+.work article:first-of-type h3 {
   display: inline-flex;
   column-gap: 16px;
   color: #6d709d;
   text-transform: capitalize;
   font-size: 21px;
 }
-.work article:first-of-type h4 svg {
+.work article:first-of-type h3 svg {
   background-color: #2e5bff;
   color: #f3f6fd;
   border-radius: 100%;
@@ -365,7 +365,7 @@ nav ul li:not(:last-of-type):hover a {
   font-family: "Montserrat Semi Bold";
   text-transform: capitalize;
 }
-.training article:last-of-type div h4 {
+.training article:last-of-type div h3 {
   font-size: 21px;
 }
 .training article:last-of-type div ul {

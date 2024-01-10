@@ -17,7 +17,7 @@ export const Footer = () => {
             )
             .map((entry, index) => (
               <li key={`footer-contact-${index}`}>
-                <a href={entry.link} target="_blank">
+                <a href={entry.link} target="_blank" aria-label={entry.type}>
                   {entry.icon}
                 </a>
               </li>

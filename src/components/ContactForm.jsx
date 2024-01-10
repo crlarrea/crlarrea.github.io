@@ -20,6 +20,7 @@ export const ContactForm = () => {
         required
         placeholder="Name"
         disabled={state.deliveryStatus}
+        aria-label="name"
       />
       <input
         type="email"
@@ -27,6 +28,7 @@ export const ContactForm = () => {
         required
         placeholder="Email"
         disabled={state.deliveryStatus}
+        aria-label="email"
       />
       <textarea
         name="message"
@@ -34,8 +36,9 @@ export const ContactForm = () => {
         minLength={50}
         maxLength={350}
         disabled={state.deliveryStatus}
+        aria-label="message"
       ></textarea>
-      <button type="submit" disabled={state.deliveryStatus}>
+      <button type="submit" aria-label="send" disabled={state.deliveryStatus}>
         {state.deliveryStatus ? <IoMdCheckmark /> : <IoMdPaperPlane />}
       </button>
     </form>

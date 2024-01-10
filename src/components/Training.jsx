@@ -24,14 +24,14 @@ export const Training = () => {
           return (
             <div key={`training-${index}`}>
               <p>{entry.issuer}</p>
-              <h4>{entry.course}</h4>
+              <h3>{entry.course}</h3>
               <ul>
                 {entry.description.map((item, index) => {
                   return <li key={`training-description-${index}`}>{item}</li>;
                 })}
               </ul>
               {entry.credential ? (
-                <a href={entry.credential} target="_blank">
+                <a href={entry.credential} target="_blank" aria-label={entry.issuer}>
                   <SlBadge />
                 </a>
               ) : (

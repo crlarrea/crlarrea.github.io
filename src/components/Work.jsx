@@ -15,10 +15,10 @@ export const Work = () => {
               <li key={`work-experience${index}`}>
                 <details>
                   <summary>
-                    <h4>
+                    <h3>
                       <MdKeyboardArrowRight />
                       {entry.title}
-                    </h4>
+                    </h3>
                     <p>
                       <span>{entry.company}</span> - {entry.location}, {entry.country}
                     </p>
