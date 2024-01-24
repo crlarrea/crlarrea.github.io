@@ -304,6 +304,18 @@ const workExperience = [
 
 const training = [
   {
+    course: "dbt Jinja, Macros, Packages",
+    to: "Jan 2024",
+    issuer: "dbt Labs",
+    issuerCrest: null,
+    credential: null,
+    description: [
+     'jinja',
+     'macros',
+     'packages'
+    ],
+  },
+  {
     course: "dbt Fundamentals",
     to: "Jan 2024",
     issuer: "dbt Labs",
