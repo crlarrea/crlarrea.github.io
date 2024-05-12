@@ -485,13 +485,13 @@ const projects = [
     image: null,
     link: "https://broughty-ferry-community.onrender.com/",
   },
-  // {
-  //   name: "angus cat rescue",
-  //   description: "Cat rescue web app.",
-  //   tags: ["react", "js", "html", "css"],
-  //   image: null,
-  //   link: "https://angus-nig8.onrender.com",
-  // },
+  {
+    name: "angus cat rescue",
+    description: "Cat rescue web app.",
+    tags: ["react", "js", "html", "css"],
+    image: null,
+    link: "https://angus-nig8.onrender.com",
+  },
 ];
 
 const keys = { web3forms: "db402685-15ef-4d07-a871-0a87e03e899d" };
