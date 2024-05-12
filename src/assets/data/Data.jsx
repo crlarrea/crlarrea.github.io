@@ -169,6 +169,20 @@ const publications = [
 
 const workExperience = [
   {
+    title: "martech executive",
+    company: "tombola - Flutter",
+    location: "Gibraltar",
+    country: "GI",
+    from: "Jan 2024",
+    to: "presently",
+    responsibilities: [
+      "Seamless integration with Hightouch and marketing tools for enhanced data flow and enrichment.",
+      "Configured GTM with precision, deploying tracking pixels and tags to optimize data collection efficiency.",
+      "Streamlined processes through automated QA, ensuring seamless operations and troubleshooting.",
+      "Took charge of POC initiatives, evaluating and implementing customer data platforms tailored to organizational requirements.",
+    ],
+  },
+  {
     title: "implementation engineer",
     company: "Spotlight Sports Group",
     location: "London",
@@ -309,25 +323,16 @@ const training = [
     issuer: "dbt Labs",
     issuerCrest: null,
     credential: null,
-    description: [
-     'jinja',
-     'macros',
-     'packages'
-    ],
+    description: ["jinja", "macros", "packages"],
   },
   {
     course: "dbt Fundamentals",
     to: "Jan 2024",
     issuer: "dbt Labs",
     issuerCrest: null,
-    credential: 'https://www.credential.net/a18d2ce3-5cc1-4351-97ad-e26c961325c6#gs.3bp5m9',
-    description: [
-     'models',
-     'sources',
-     'tests',
-     'documentation',
-     'deployment'
-    ],
+    credential:
+      "https://www.credential.net/a18d2ce3-5cc1-4351-97ad-e26c961325c6#gs.3bp5m9",
+    description: ["models", "sources", "tests", "documentation", "deployment"],
   },
   {
     course: "SQL for Data Analysis",
@@ -336,13 +341,13 @@ const training = [
     issuerCrest: null,
     credential: null,
     description: [
-     "basic SQL",
-     "joins",
-     "aggregations",
-     "subqueries & temporary tables",
-     "data cleaning",
-     "window functions",
-     "advanced joins & performance tuning"
+      "basic SQL",
+      "joins",
+      "aggregations",
+      "subqueries & temporary tables",
+      "data cleaning",
+      "window functions",
+      "advanced joins & performance tuning",
     ],
   },
   {
