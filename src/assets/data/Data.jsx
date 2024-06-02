@@ -449,6 +449,13 @@ const training = [
 
 const projects = [
   {
+    name: "eh9",
+    description: "EH9 homepage revamp.",
+    tags: ["react", "hooks", "js", "html", "css", "db", "api"],
+    image: null,
+    link: "https://eh9.onrender.com",
+  },
+  {
     name: "long lane",
     description: "A digital analytics agency landing page.",
     tags: ["react", "hooks", "js", "html", "css", "rudderstack", "forms"],
