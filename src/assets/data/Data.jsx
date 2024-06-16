@@ -450,7 +450,7 @@ const training = [
 const projects = [
   {
     name: "cobrah",
-    description: "Cobrah homepage rendition.",
+    description: "Cobrah homepage revamp.",
     tags: ["react", "hooks", "js", "html", "css", "db", "api"],
     image: null,
     link: "https://cobrah.onrender.com",
