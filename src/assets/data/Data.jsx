@@ -497,13 +497,13 @@ const projects = [
     image: null,
     link: "https://ghibli.onrender.com",
   },
-  {
-    name: "BFC",
-    description: "Broughty Ferry Community landing page.",
-    tags: ["react", "js", "html", "css"],
-    image: null,
-    link: "https://broughty-ferry-community.onrender.com/",
-  },
+  // {
+  //   name: "BFC",
+  //   description: "Broughty Ferry Community landing page.",
+  //   tags: ["react", "js", "html", "css"],
+  //   image: null,
+  //   link: "https://broughty-ferry-community.onrender.com/",
+  // },
   {
     name: "angus cat rescue",
     description: "Cat rescue web app.",
