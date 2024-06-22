@@ -9,7 +9,7 @@ export const Hero = () => {
       <article>
         <p>hello, i'm christian</p>
         <h1>
-          implementation <span>engineer</span>
+          data analytics <span>engineer</span>
         </h1>
         <p>
           let's talk about digital analytics, integrations, and customer data
