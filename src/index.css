@@ -790,7 +790,7 @@ h4 {
   body {
     width: 100vw;
     border: none;
-    background: linear-gradient(220deg, #f6d3d1 2%, #f2bbfe 10%, #f3f6fd 600px);
+    background: linear-gradient(220deg, #f6d3d1 2%, #f2bbfe, #f3f6fd 600px);
   }
   body,
   footer {
