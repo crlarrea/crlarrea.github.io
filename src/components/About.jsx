@@ -11,7 +11,7 @@ export const About = () => {
       <article>
         <h2>about me</h2>
         <p>
-          I'm an analytics implementation engineer and programming enthusiast
+          I'm an data analytics engineer and programming enthusiast
           based in bonny Scotland. Get in touch to find out more.
         </p>
         <div>
