@@ -26,7 +26,7 @@ export const Training = () => {
   }, []);
 
   const { ref, inView, entry } = useInView({
-    threshold: 1,
+    threshold: 0,
     triggerOnce: true,
   });
 
