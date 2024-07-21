@@ -812,7 +812,7 @@ h2 {
     bottom: auto;
   }
   .hero article:last-of-type img {
-    position: fixed;
+    display: none;
   }
   .about {
     flex-flow: column nowrap;
