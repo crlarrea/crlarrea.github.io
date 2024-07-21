@@ -32,41 +32,43 @@ export const Training = () => {
 
   return (
     <section className="training" id="training" ref={ref}>
-      <article>
-        <h2>training</h2>
-      </article>
       {inView && (
-        <article className="fade-in">
-          <div>
-            {training &&
-              training.map((entry) => {
-                return (
-                  <div key={entry.id}>
-                    <span>{entry.issuer}</span>
-                    <h3> {entry.course}</h3>
-                    <ul>
-                      {entry.tags.map((tag, index) => {
-                        return <li key={`${entry.id}-${index}`}>{tag}</li>;
-                      })}
-                    </ul>
-                    {entry.certificate && (
-                      <a href={entry.certificate} target="_blank">
-                        <RiVerifiedBadgeLine />
-                      </a>
-                    )}
-                  </div>
-                );
-              })}
-            <IoIosArrowDropleftCircle
-              data-direction="left"
-              onClick={scrollCarousel}
-            />
-            <IoIosArrowDroprightCircle
-              data-direction="right"
-              onClick={scrollCarousel}
-            />
-          </div>
-        </article>
+        <>
+          <article>
+            <h2>training</h2>
+          </article>
+          <article className="fade-in">
+            <div>
+              {training &&
+                training.map((entry) => {
+                  return (
+                    <div key={entry.id}>
+                      <span>{entry.issuer}</span>
+                      <h3> {entry.course}</h3>
+                      <ul>
+                        {entry.tags.map((tag, index) => {
+                          return <li key={`${entry.id}-${index}`}>{tag}</li>;
+                        })}
+                      </ul>
+                      {entry.certificate && (
+                        <a href={entry.certificate} target="_blank">
+                          <RiVerifiedBadgeLine />
+                        </a>
+                      )}
+                    </div>
+                  );
+                })}
+              <IoIosArrowDropleftCircle
+                data-direction="left"
+                onClick={scrollCarousel}
+              />
+              <IoIosArrowDroprightCircle
+                data-direction="right"
+                onClick={scrollCarousel}
+              />
+            </div>
+          </article>
+        </>
       )}
     </section>
   );

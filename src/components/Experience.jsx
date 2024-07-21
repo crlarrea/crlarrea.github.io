@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { createClient } from "@supabase/supabase-js";
 import { capitalize } from "../utils/utils";
-import { useInView } from "react-intersection-observer";
 
 const supabase = createClient(
   import.meta.env.VITE_SUPABASE_URL,
@@ -22,17 +21,14 @@ export const Experience = () => {
   useEffect(() => {
     getWorkExperience();
   }, []);
-  const { ref, inView, entry } = useInView({
-    threshold: 1,
-    triggerOnce: true,
-  });
+
   return (
-    <section className="experience" id="work" ref={ref}>
+    <section className="experience" id="work">
       <article>
         <h2> experience</h2>
 
-        {workExperience && inView && (
-          <ul className="fade-in">
+        {workExperience && (
+          <ul>
             {workExperience.map((entry, index) => {
               return (
                 <li key={entry.id}>

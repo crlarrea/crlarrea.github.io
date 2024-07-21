@@ -34,37 +34,39 @@ export const Publications = () => {
 
   return (
     <section className="publications" id="publications" ref={ref}>
-      <article>
-        <h2>publications</h2>
-      </article>
       {inView && (
-        <article className="fade-in">
-          <div>
-            {publications &&
-              publications.map((entry) => {
-                return (
-                  <a key={entry.id} href={entry.url} target="_blank">
-                    <h3>{entry.title}</h3>
-                    <p>{entry.journal}</p>
+        <>
+          <article>
+            <h2>publications</h2>
+          </article>
+          <article className="fade-in">
+            <div>
+              {publications &&
+                publications.map((entry) => {
+                  return (
+                    <a key={entry.id} href={entry.url} target="_blank">
+                      <h3>{entry.title}</h3>
+                      <p>{entry.journal}</p>
 
-                    <ul>
-                      {entry.authors.map((author, index) => {
-                        return <li key={`${entry.id}-${index}`}>{author}</li>;
-                      })}
-                    </ul>
-                  </a>
-                );
-              })}
-          </div>
-          <IoIosArrowDropleftCircle
-            data-direction="left"
-            onClick={scrollCarousel}
-          />
-          <IoIosArrowDroprightCircle
-            data-direction="right"
-            onClick={scrollCarousel}
-          />
-        </article>
+                      <ul>
+                        {entry.authors.map((author, index) => {
+                          return <li key={`${entry.id}-${index}`}>{author}</li>;
+                        })}
+                      </ul>
+                    </a>
+                  );
+                })}
+            </div>
+            <IoIosArrowDropleftCircle
+              data-direction="left"
+              onClick={scrollCarousel}
+            />
+            <IoIosArrowDroprightCircle
+              data-direction="right"
+              onClick={scrollCarousel}
+            />
+          </article>
+        </>
       )}
     </section>
   );
