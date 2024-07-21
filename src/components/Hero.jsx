@@ -11,8 +11,8 @@ import {
 
 export const Hero = () => {
   return (
-    <section className="hero fade-in">
-      <article fetchpriority="high" >
+    <section className="hero">
+      <article>
         <h1>christian larrea</h1>
         <p>data analytics engineer and web development enthusiast.</p>
         <a href={cv} download="christian_larrea.pdf" className="secondary-btn">
