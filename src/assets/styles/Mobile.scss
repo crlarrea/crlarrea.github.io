@@ -14,8 +14,8 @@
     row-gap: $m;
   }
 
-  main{
-    margin-top: $xh;;
+  main {
+    margin-top: $xh;
   }
   .open-to-work {
     span {
@@ -30,6 +30,9 @@
   nav {
     padding: 0;
     width: 100%;
+    ul {
+      column-gap: $xxl;
+    }
   }
 
   .hero {
@@ -65,17 +68,16 @@
         li {
           details {
             margin-left: $xl;
-            summary{
-                span{
-                    left:-$xh;
-                    transform: rotate(-90deg);
-                    border: none;
-                    color: $gray400;
-                    margin-top: -$xl;;
-                    
-                }
+            summary {
+              span {
+                left: -$xh;
+                transform: rotate(-90deg);
+                border: none;
+                color: $gray400;
+                margin-top: -$xl;
+              }
             }
-            
+
             ul {
               list-style-type: none;
               margin-left: 0;

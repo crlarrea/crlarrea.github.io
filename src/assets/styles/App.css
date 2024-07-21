@@ -698,9 +698,11 @@ h2 {
 @keyframes fadeIn {
   0% {
     opacity: 0;
+    transform: translateY(60px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -791,6 +793,9 @@ h2 {
   nav {
     padding: 0;
     width: 100%;
+  }
+  nav ul {
+    column-gap: 30px;
   }
   .hero {
     flex-flow: column nowrap;
