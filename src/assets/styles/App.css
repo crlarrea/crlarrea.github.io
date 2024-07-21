@@ -247,7 +247,7 @@ nav ul li a:hover {
   row-gap: 60px;
   list-style-type: none;
   margin-left: 60px;
-  min-width: 50%;
+  min-width: 60%;
 }
 .experience article ul li details {
   cursor: pointer;
