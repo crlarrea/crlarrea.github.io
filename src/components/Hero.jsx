@@ -20,26 +20,40 @@ export const Hero = () => {
         </a>
       </article>
       <article>
-        <img src={photo} alt="placeholder" loading="lazy" />
+        <img src={photo} alt="placeholder" />
         <ul>
           <li></li>
           <li>
-            <a href="https://linkedin.com/in/christian-larrea/" target="_blank" aria-label="Link to LinkedIn">
+            <a
+              href="https://linkedin.com/in/christian-larrea/"
+              target="_blank"
+              aria-label="Link to LinkedIn"
+            >
               <FaLinkedinIn />
             </a>
           </li>
           <li>
-            <a href="https://wa.me/447522140226/?text=Hello%2C%20Christian!" aria-label="Link to WhatsApp">
+            <a
+              href="https://wa.me/447522140226/?text=Hello%2C%20Christian!"
+              aria-label="Link to WhatsApp"
+            >
               <FaWhatsapp />
             </a>
           </li>
           <li>
-            <a href="mailto:crlarrea@protonmail.com?subject=Hello%20there!" aria-label="Link to Email">
+            <a
+              href="mailto:crlarrea@protonmail.com?subject=Hello%20there!"
+              aria-label="Link to Email"
+            >
               <FaRegPaperPlane />
             </a>
           </li>
           <li>
-            <a href="https://orcid.org/0000-0001-7579-7876" target="_blank" aria-label="Link to Orcid">
+            <a
+              href="https://orcid.org/0000-0001-7579-7876"
+              target="_blank"
+              aria-label="Link to Orcid"
+            >
               <FaOrcid />
             </a>
           </li>
