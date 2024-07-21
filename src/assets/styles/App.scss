@@ -45,7 +45,7 @@ nav {
           transform: capitalize;
         }
         &:hover {
-          color: $white;
+          color: $turquoise;
           opacity: 1;
         }
       }
@@ -101,11 +101,11 @@ nav {
   }
 }
 .active {
-  color: $white;
+  color: $turquoise;
 }
 .inactive {
-  color: $gray400;
-  opacity: 0.7;
+  color: $white;
+  
 }
 
 .hero {
