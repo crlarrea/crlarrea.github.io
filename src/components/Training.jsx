@@ -1,54 +1,73 @@
-import React, { useRef } from "react";
-import { training } from "../assets/data/Data";
-import { SlBadge } from "react-icons/sl";
-import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
-import { scrollCarousell } from "../utils/Helpers";
+import React, { useEffect, useState } from "react";
+import { createClient } from "@supabase/supabase-js";
+import { RiVerifiedBadgeLine } from "react-icons/ri";
+import { scrollCarousel } from "../utils/utils";
+import { useInView } from "react-intersection-observer";
+
+import {
+  IoIosArrowDroprightCircle,
+  IoIosArrowDropleftCircle,
+} from "react-icons/io";
+
+const supabase = createClient(
+  import.meta.env.VITE_SUPABASE_URL,
+  import.meta.env.VITE_SUPABASE_KEY
+);
+
 export const Training = () => {
-  const trainingCarousell = useRef(null);
+  const [training, setTraining] = useState(null);
+  const getTraining = async () => {
+    let { data: data, error } = await supabase.from("training").select("*");
+    setTraining(data);
+  };
+
+  useEffect(() => {
+    getTraining();
+  }, []);
+
+  const { ref, inView, entry } = useInView({
+    threshold: 1,
+    triggerOnce: true,
+  });
 
   return (
-    <section className="training" id="training">
+    <section className="training" id="training" ref={ref}>
       <article>
         <h2>training</h2>
       </article>
-      <article ref={trainingCarousell}>
-        <span
-          data-direction="left"
-          onClick={(ev) => {
-            scrollCarousell(ev, trainingCarousell);
-          }}
-        >
-          <BsChevronCompactLeft />
-        </span>
-        {training.map((entry, index) => {
-          return (
-            <div key={`training-${index}`}>
-              <p>{entry.issuer}</p>
-              <h3>{entry.course}</h3>
-              <ul>
-                {entry.description.map((item, index) => {
-                  return <li key={`training-description-${index}`}>{item}</li>;
-                })}
-              </ul>
-              {entry.credential ? (
-                <a href={entry.credential} target="_blank" aria-label={entry.issuer}>
-                  <SlBadge />
-                </a>
-              ) : (
-                ""
-              )}
-            </div>
-          );
-        })}
-        <span
-          data-direction="right"
-          onClick={(ev) => {
-            scrollCarousell(ev, trainingCarousell);
-          }}
-        >
-          <BsChevronCompactRight />
-        </span>
-      </article>
+      {inView && (
+        <article className="fade-in">
+          <div>
+            {training &&
+              training.map((entry) => {
+                return (
+                  <div key={entry.id}>
+                    <span>{entry.issuer}</span>
+                    <h3> {entry.course}</h3>
+                    <ul>
+                      {entry.tags.map((tag, index) => {
+                        return <li key={`${entry.id}-${index}`}>{tag}</li>;
+                      })}
+                    </ul>
+                    {entry.certificate && (
+                      <a href={entry.certificate} target="_blank">
+                        <RiVerifiedBadgeLine />
+                      </a>
+                    )}
+                  </div>
+                );
+              })}
+            <IoIosArrowDropleftCircle
+              data-direction="left"
+              onClick={scrollCarousel}
+            />
+            <IoIosArrowDroprightCircle
+              data-direction="right"
+              onClick={scrollCarousel}
+            />
+          </div>
+        </article>
+      )}
     </section>
   );
 };

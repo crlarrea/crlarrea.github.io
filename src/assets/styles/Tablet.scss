@@ -1,0 +1,94 @@
+// Tablet
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  #root {
+    width: 90vw;
+  }
+  header {
+    flex-flow: column nowrap;
+    align-items: center;
+    row-gap: $m;
+  }
+  nav {
+    padding: 0;
+    width: 250px;
+    ul {
+      flex: 0 0 100%;
+    }
+  }
+  .open-to-work {
+    margin-top: $m;
+    span {
+      right: 45%;
+      top: $m;
+    }
+    p {
+      margin-left: 0;
+      
+    }
+  }
+
+  .hero {
+    article {
+      &:first-of-type {
+        flex: 0 0 70%;
+        padding: $xh;
+      }
+      &:last-of-type {
+        flex: 0 0 30%;
+        img {
+          left: -100%;
+          top:50%;
+          width: 200%;
+          // display: none;
+        }
+      }
+    }
+  }
+
+  .about {
+    margin-top: calc(3 * #{$xh});
+    flex-flow: column nowrap;
+    row-gap: $xh;
+  }
+
+  .experience {
+    
+    article {
+      ul {
+        min-width: 80%;
+        li {
+          details {
+            ul {
+              li {
+                max-width: 350px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .publications {
+    article {
+      &:last-of-type {
+        width: 100%;
+        
+        svg {
+          display: none;
+        }
+      }
+    }
+  }
+  .training{
+    article{
+      &:last-of-type{
+        div{
+          width: 100%;
+          svg[data-direction]{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

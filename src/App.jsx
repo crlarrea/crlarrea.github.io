@@ -1,28 +1,33 @@
+import "./assets/styles/App.css";
+import { About } from "./components/About";
+import { Hero } from "./components/Hero";
 import { Nav } from "./components/Nav";
-
-import { HelmetProvider } from "react-helmet-async";
-import { Head } from "./utils/Head";
-import { useEffect } from "react";
-import { Rudderstack } from "./utils/Rudderstack";
-import { Home } from "./pages/Home";
+import { OpenToWork } from "./components/OpenToWork";
+import { Experience } from "./components/Experience";
+import { Projects } from "./components/Projects";
+import { Publications } from "./components/Publications";
+import { Training } from "./components/Training";
 import { Footer } from "./components/Footer";
-import { GTMnoScript } from "./utils/GTMnoScript";
 
 function App() {
   return (
-    <HelmetProvider>
-      <GTMnoScript/>
-      <Head />
+    <>
       <header>
+        <OpenToWork />
         <Nav />
       </header>
       <main>
-        <Home />
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Publications />
+        <Training />
       </main>
-      <footer id="contact"> 
+      <footer>
         <Footer />
-      </footer >
-    </HelmetProvider>
+      </footer>
+    </>
   );
 }
 

@@ -1,30 +1,54 @@
-import React from "react";
-import { projects } from "../assets/data/Data";
+import React, { useEffect, useState } from "react";
+import { createClient } from "@supabase/supabase-js";
+import { capitalize } from "../utils/utils";
+import { useInView } from "react-intersection-observer";
+
+const supabase = createClient(
+  import.meta.env.VITE_SUPABASE_URL,
+  import.meta.env.VITE_SUPABASE_KEY
+);
+
 export const Projects = () => {
+  const [projects, setProjects] = useState(null);
+  const getProjects = async () => {
+    let { data: data, error } = await supabase.from("projects").select("*");
+
+    setProjects(data);
+  };
+
+  useEffect(() => {
+    getProjects();
+  }, []);
+
+  const { ref, inView, entry } = useInView({
+    threshold: 1,
+    triggerOnce: true,
+  });
+
   return (
-    <section className="projects" id="projects">
+    <section className="projects" id="projects" ref={ref}>
       <article>
         <h2>projects</h2>
       </article>
-      <article>
-        {projects.map((project, index) => {
-          return (
-            <div key={`project-${index}`}>
-              <h3>
-                <a href={project.link} target="_blank">
-                  {project.name}
+      {inView && (
+        <article className="fade-in">
+          {projects &&
+            projects.map((entry) => {
+              return (
+                <a key={entry.id} href={entry.url} target="_blank">
+                  <img src={entry.image} loading="lazy" />
+                  <h4>{capitalize(entry.name)}</h4>
+                  <p>{entry.description}</p>
+                  <ul>
+                    {entry.tags.map((tag, index) => {
+                      return <li key={`${entry.id}-${index}`}>{tag}</li>;
+                    })}
+                  </ul>
                 </a>
-              </h3>
-              <p>{project.description}</p>
-              <ul>
-                {project.tags.map((entry, index) => {
-                  return <li key={`project-description-${index}`}>{entry}</li>;
-                })}
-              </ul>
-            </div>
-          );
-        })}
-      </article>
+              );
+            })}
+        </article>
+      )}
     </section>
   );
 };

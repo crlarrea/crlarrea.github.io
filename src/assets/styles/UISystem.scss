@@ -1,0 +1,77 @@
+// Sizes
+$xxs: 7px;
+$xs: 12px;
+$s: 14px;
+$m: 16px;
+$l: 18px;
+$xl: 20px;
+$xxl: 24px;
+$xxl: 30px;
+$xxxl: 36px;
+$h: 48px;
+$xh: 60px;
+$xxh: 72px;
+
+// Colors
+$gray900: #212529;
+$gray600: #343a40;
+$gray500: #515963ff;
+$gray400: #adb5bd;
+$blue: #14213d;
+$yellow: #fca311;
+
+$white: #ffffff;
+$turquoise: #80ffdb;
+$electricBlue: #2e5bff;
+
+// Fonts
+@font-face {
+  font-family: "Nunito Light";
+  src: url("../fonts/Nunito-Light.ttf");
+}
+@font-face {
+  font-family: "Nunito Semi Bold";
+  src: url("../fonts/Nunito-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Nunito Bold";
+  src: url("../fonts/Nunito-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Serif Semi Bold";
+  src: url("../fonts/JosefinSans-Medium.ttf");
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: $h;
+}
+
+#root {
+  width: 1200px;
+  min-height: 100vh;
+  border-radius: $s;
+}
+
+@mixin hideScrollbar {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  /* IE and Edge */
+  -ms-overflow-style: none;
+  /* Firefox */
+  scrollbar-width: none;
+}

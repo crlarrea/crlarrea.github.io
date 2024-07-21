@@ -1,42 +1,71 @@
-import React, { useRef } from "react";
-import { publications } from "../assets/data/Data";
-import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
-import { scrollCarousell } from "../utils/Helpers";
+import React, { useEffect, useState } from "react";
+import { createClient } from "@supabase/supabase-js";
+import { useInView } from "react-intersection-observer";
+
+import {
+  IoIosArrowDroprightCircle,
+  IoIosArrowDropleftCircle,
+} from "react-icons/io";
+import { scrollCarousel } from "../utils/utils";
+const supabase = createClient(
+  import.meta.env.VITE_SUPABASE_URL,
+  import.meta.env.VITE_SUPABASE_KEY
+);
+
 export const Publications = () => {
-  const publicationsCarousell = useRef(null);
+  const [publications, setPublications] = useState(null);
+  const getPublications = async () => {
+    let { data: data, error } = await supabase
+      .from("publications")
+      .select("*")
+      .order("year", { ascending: false });
+
+    setPublications(data);
+  };
+
+  useEffect(() => {
+    getPublications();
+  }, []);
+
+  const { ref, inView, entry } = useInView({
+    threshold: 1,
+    triggerOnce: true,
+  });
+
   return (
-    <section className="publications" id="publications">
+    <section className="publications" id="publications" ref={ref}>
       <article>
         <h2>publications</h2>
       </article>
-      <article ref={publicationsCarousell}>
-        <span data-direction="left"  onClick={(ev) => {
-            scrollCarousell(ev, publicationsCarousell);
-          }}>
-          <BsChevronCompactLeft />
-        </span>
-        {publications.map((entry, index) => {
-          return (
-            <div key={`publication-${index}`}>
-              <h3>
-                <a href={entry.link} target="_blank">
-                  {entry.title}
-                </a>
-              </h3>
-              <p>{entry.authors.join(", ")}</p>
-              <p>{entry.journal}</p>
-            </div>
-          );
-        })}
-        <span
-          data-direction="right"
-          onClick={(ev) => {
-            scrollCarousell(ev, publicationsCarousell);
-          }}
-        >
-          <BsChevronCompactRight />
-        </span>
-      </article>
+      {inView && (
+        <article className="fade-in">
+          <div>
+            {publications &&
+              publications.map((entry) => {
+                return (
+                  <a key={entry.id} href={entry.url} target="_blank">
+                    <h3>{entry.title}</h3>
+                    <p>{entry.journal}</p>
+
+                    <ul>
+                      {entry.authors.map((author, index) => {
+                        return <li key={`${entry.id}-${index}`}>{author}</li>;
+                      })}
+                    </ul>
+                  </a>
+                );
+              })}
+          </div>
+          <IoIosArrowDropleftCircle
+            data-direction="left"
+            onClick={scrollCarousel}
+          />
+          <IoIosArrowDroprightCircle
+            data-direction="right"
+            onClick={scrollCarousel}
+          />
+        </article>
+      )}
     </section>
   );
 };

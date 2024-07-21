@@ -1,41 +1,49 @@
 import React from "react";
-import { Player, Controls } from "@lottiefiles/react-lottie-player";
-import heroAnimation from "../assets/img/hero_animation.json";
-import { contact } from "../assets/data/Data";
+import photo from "../assets/img/wee_me.webp";
+import cv from "../assets/img/christian_larrea.pdf";
+
+import {
+  FaLinkedinIn,
+  FaWhatsapp,
+  FaRegPaperPlane,
+  FaOrcid,
+} from "react-icons/fa6";
 
 export const Hero = () => {
   return (
-    <section className="hero">
+    <section className="hero fade-in">
       <article>
-        <p>hello, i'm christian</p>
-        <h1>
-          data analytics <span>engineer</span>
-        </h1>
-        <p>
-          let's talk about digital analytics, integrations, and customer data
-          platforms!
-        </p>
-        <ul>
-          {contact
-            .filter((entry) =>
-              ["linkedIn", "mobile", "email"].includes(entry.type)
-            )
-            .map((entry, index) => (
-              <li key={`hero-contact-${index}`}>
-                <a href={entry.link} target="_blank" aria-label={entry.type}>
-                  {entry.icon}
-                </a>
-              </li>
-            ))}
-        </ul>
+        <h1>christian larrea</h1>
+        <p>data analytics engineer and web development enthusiast.</p>
+        <a href={cv} download="christian_larrea.pdf" className="secondary-btn">
+          download CV
+        </a>
       </article>
       <article>
-        <Player autoplay loop src={heroAnimation}>
-          <Controls
-            visible={false}
-            buttons={["play", "repeat", "frame", "debug"]}
-          />
-        </Player>
+        <img src={photo} alt="placeholder" loading="lazy" />
+        <ul>
+          <li></li>
+          <li>
+            <a href="https://linkedin.com/in/christian-larrea/" target="_blank">
+              <FaLinkedinIn />
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/447522140226/?text=Hello%2C%20Christian!">
+              <FaWhatsapp />
+            </a>
+          </li>
+          <li>
+            <a href="mailto:crlarrea@protonmail.com?subject=Hello%20there!">
+              <FaRegPaperPlane />
+            </a>
+          </li>
+          <li>
+            <a href="https://orcid.org/0000-0001-7579-7876" target="_blank">
+              <FaOrcid />
+            </a>
+          </li>
+        </ul>
       </article>
     </section>
   );

@@ -1,0 +1,160 @@
+// Mobile
+@media only screen and (min-device-width: 220px) and (max-device-width: 767px) {
+  body {
+    margin: 0;
+  }
+  #root {
+    border: none;
+  }
+
+  header {
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 0;
+    row-gap: $m;
+  }
+
+  main{
+    margin-top: $xh;;
+  }
+  .open-to-work {
+    span {
+      left: 45%;
+    }
+    p {
+      margin-left: 0;
+      margin-top: $xxs;
+    }
+  }
+
+  nav {
+    padding: 0;
+    width: 100%;
+  }
+
+  .hero {
+    flex-flow: column nowrap;
+    article {
+      &:first-of-type {
+        padding: $xxl;
+      }
+      &:last-of-type {
+        ul {
+          right: $xxl;
+          bottom: auto;
+          // position:fixed;
+        }
+        img {
+          position: fixed;
+        }
+      }
+    }
+  }
+
+  .about {
+    flex-flow: column nowrap;
+    padding: $xxl;
+    row-gap: $xh;
+  }
+
+  .experience {
+    padding: $xxxl;
+    article {
+      ul {
+        margin-left: $xxl;
+        li {
+          details {
+            margin-left: $xl;
+            summary{
+                span{
+                    left:-$xh;
+                    transform: rotate(-90deg);
+                    border: none;
+                    color: $gray400;
+                    margin-top: -$xl;;
+                    
+                }
+            }
+            
+            ul {
+              list-style-type: none;
+              margin-left: 0;
+              li {
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .projects {
+    padding: $m;
+    max-width: 100vw;
+    article {
+      &:last-of-type {
+        flex-flow: row nowrap;
+        overflow-x: scroll;
+        @include hideScrollbar;
+        justify-content: flex-start;
+
+        a {
+          flex: 0 0 100%;
+
+          img {
+            transform: scale(1.5);
+            filter: brightness(0.4);
+          }
+          h4,
+          p,
+          ul {
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+
+  .publications,
+  .training {
+    max-width: 100vw;
+    padding: $m;
+
+    article {
+      &:last-of-type {
+        flex-flow: row nowrap;
+        overflow-x: scroll;
+        max-width: 100%;
+        @include hideScrollbar;
+        svg[data-direction] {
+          display: none;
+        }
+      }
+    }
+  }
+  footer {
+    border-bottom: {
+      left-radius: 0;
+      right-radius: 0;
+    }
+    padding: $xxl;
+    article {
+      &:first-of-type {
+        p {
+          transform: none;
+          writing-mode: horizontal-tb;
+          bottom: 0;
+          padding: $s;
+        }
+      }
+      &:last-of-type {
+        flex: 0 0 100%;
+      }
+    }
+  }
+
+  section {
+    margin-bottom: calc(3 * #{$xh});
+  }
+}

@@ -1,16 +1,23 @@
 import React from "react";
-import { OpenToWork } from "./OpenToWork";
-
+import { useState } from "react";
 export const Nav = () => {
-  const navTitles = ["work", "publications", "training", "about", "contact"];
+  const navigation = ["about", "work", "projects"];
+  const [isActive, setActive] = useState(false);
   return (
     <nav>
-      <OpenToWork />
       <ul>
-        {navTitles.map((entry, index) => {
+        {navigation.map((link) => {
           return (
-            <li key={`menu-${index}`}>
-              <a href={`#${entry}`}>{entry}</a>
+            <li key={link}>
+              <a
+                href={`#${link}`}
+                onClick={() => {
+                  setActive(link);
+                }}
+                className={link === isActive ? "active" : "inactive"}
+              >
+                {link}
+              </a>
             </li>
           );
         })}
