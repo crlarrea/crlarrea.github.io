@@ -27,23 +27,23 @@ $electricBlue: #2e5bff;
 // Fonts
 @font-face {
   font-family: "Nunito Light";
-  src: local("Courier"), url("../fonts/Nunito-Light.ttf");
+  src: url("../fonts/Nunito-Light.ttf"), local("Courier");
   font-display: swap;
 }
 @font-face {
   font-family: "Nunito Semi Bold";
-  src: local("Courier"), url("../fonts/Nunito-SemiBold.ttf");
+  src: url("../fonts/Nunito-SemiBold.ttf"), local("Courier");
   font-display: swap;
 }
 @font-face {
   font-family: "Nunito Bold";
-  src: local("Courier"), url("../fonts/Nunito-Bold.ttf");
+  src: url("../fonts/Nunito-Bold.ttf"), local("Courier");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Serif Semi Bold";
-  src: local("Courier"), url("../fonts/JosefinSans-Medium.ttf");
+  src: url("../fonts/JosefinSans-Medium.ttf"), local("Courier");
   font-display: swap;
 }
 * {
