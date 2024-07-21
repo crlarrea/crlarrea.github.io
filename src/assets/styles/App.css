@@ -742,9 +742,9 @@ h2 {
     flex: 0 0 30%;
   }
   .hero article:last-of-type img {
-    left: -100%;
-    top: 50%;
-    width: 200%;
+    left: -80%;
+    top: 10%;
+    width: 150%;
   }
   .about {
     margin-top: calc(3 * 60px);
