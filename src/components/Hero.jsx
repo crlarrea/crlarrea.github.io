@@ -24,22 +24,22 @@ export const Hero = () => {
         <ul>
           <li></li>
           <li>
-            <a href="https://linkedin.com/in/christian-larrea/" target="_blank">
+            <a href="https://linkedin.com/in/christian-larrea/" target="_blank" aria-label="Link to LinkedIn">
               <FaLinkedinIn />
             </a>
           </li>
           <li>
-            <a href="https://wa.me/447522140226/?text=Hello%2C%20Christian!">
+            <a href="https://wa.me/447522140226/?text=Hello%2C%20Christian!" aria-label="Link to WhatsApp">
               <FaWhatsapp />
             </a>
           </li>
           <li>
-            <a href="mailto:crlarrea@protonmail.com?subject=Hello%20there!">
+            <a href="mailto:crlarrea@protonmail.com?subject=Hello%20there!" aria-label="Link to Email">
               <FaRegPaperPlane />
             </a>
           </li>
           <li>
-            <a href="https://orcid.org/0000-0001-7579-7876" target="_blank">
+            <a href="https://orcid.org/0000-0001-7579-7876" target="_blank" aria-label="Link to Orcid">
               <FaOrcid />
             </a>
           </li>
