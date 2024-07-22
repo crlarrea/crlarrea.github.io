@@ -48,7 +48,11 @@
           // position:fixed;
         }
         img {
-          position: fixed;
+          margin-left: 0;
+        // left: $xxl;
+          // right:0;
+
+          // position: fixed;
           // display: none;
         }
       }
@@ -58,7 +62,9 @@
   .about {
     flex-flow: column nowrap;
     padding: $xxl;
+    padding-top: calc(3*#{$xh});
     row-gap: $xh;
+    
   }
 
   .experience {
@@ -158,6 +164,6 @@
   }
 
   section {
-    margin-bottom: calc(3 * #{$xh});
+    // margin-bottom: calc(3 * #{$xh});
   }
 }

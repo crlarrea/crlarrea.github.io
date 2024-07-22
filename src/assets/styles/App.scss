@@ -105,7 +105,6 @@ nav {
 }
 .inactive {
   color: $white;
-  
 }
 
 .hero {
@@ -131,14 +130,14 @@ nav {
     }
     &:last-of-type {
       position: relative;
+      justify-content: flex-end;
       img {
-        position: absolute;
+        // position: absolute;
         width: 100%;
-        left: -10%;
+        margin-left: -10%;
 
-        filter: grayscale(1) brightness(0.7)
+        filter: grayscale(1) brightness(0.5)
           drop-shadow(0 0 $xh rgba($turquoise, 0.2));
-        z-index: 0;
       }
       ul {
         display: flex;
@@ -177,10 +176,13 @@ nav {
 
 .about {
   padding: $xh;
+  padding-top: calc(3 *#{$xh});
+  background-color: rgba($turquoise,0.1);
   margin: {
-    top: calc(7 *#{$xh});
+    // top: calc(7 *#{$xh});
     bottom: calc(5 *#{$xh});
   }
+
   display: flex;
   column-gap: $h;
   article {
@@ -211,14 +213,14 @@ nav {
       align-items: flex-end;
 
       svg {
-        filter: drop-shadow(0 0 $xxs rgba($turquoise, 0.3));
+        filter: drop-shadow(0 0 $xxs rgba($white, 0.5));
       }
     }
   }
 }
 .experience {
   padding: $xh;
-  background-color: $gray500;
+  // background-color: $gray500;
   article {
     display: flex;
     flex-flow: column nowrap;
@@ -276,7 +278,7 @@ nav {
               display: block;
               background-color: $gray400;
               border-radius: 100%;
-              outline: 10px solid $gray500;
+              outline: 10px solid $gray600;
 
               div {
                 position: absolute;

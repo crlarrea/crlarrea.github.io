@@ -36,8 +36,7 @@
       &:last-of-type {
         flex: 0 0 30%;
         img {
-          left: -80%;
-          top:10%;
+          margin-left: -80%;
           width: 150%;
           // display: none;
         }
@@ -46,7 +45,6 @@
   }
 
   .about {
-    margin-top: calc(3 * #{$xh});
     flex-flow: column nowrap;
     row-gap: $xh;
   }

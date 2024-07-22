@@ -152,13 +152,12 @@ nav ul li a:hover {
 }
 .hero article:last-of-type {
   position: relative;
+  justify-content: flex-end;
 }
 .hero article:last-of-type img {
-  position: absolute;
   width: 100%;
-  left: -10%;
-  filter: grayscale(1) brightness(0.7) drop-shadow(0 0 60px rgba(128, 255, 219, 0.2));
-  z-index: 0;
+  margin-left: -10%;
+  filter: grayscale(1) brightness(0.5) drop-shadow(0 0 60px rgba(128, 255, 219, 0.2));
 }
 .hero article:last-of-type ul {
   display: flex;
@@ -190,7 +189,8 @@ nav ul li a:hover {
 
 .about {
   padding: 60px;
-  margin-top: calc(7 *60px);
+  padding-top: calc(3 *60px);
+  background-color: rgba(128, 255, 219, 0.1);
   margin-bottom: calc(5 *60px);
   display: flex;
   column-gap: 48px;
@@ -223,12 +223,11 @@ nav ul li a:hover {
   align-items: flex-end;
 }
 .about article:last-of-type svg {
-  filter: drop-shadow(0 0 7px rgba(128, 255, 219, 0.3));
+  filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.5));
 }
 
 .experience {
   padding: 60px;
-  background-color: #515963;
 }
 .experience article {
   display: flex;
@@ -283,7 +282,7 @@ nav ul li a:hover {
   display: block;
   background-color: #adb5bd;
   border-radius: 100%;
-  outline: 10px solid #515963;
+  outline: 10px solid #343a40;
 }
 .experience article ul li details summary div div {
   position: absolute;
@@ -742,12 +741,10 @@ h2 {
     flex: 0 0 30%;
   }
   .hero article:last-of-type img {
-    left: -80%;
-    top: 10%;
+    margin-left: -80%;
     width: 150%;
   }
   .about {
-    margin-top: calc(3 * 60px);
     flex-flow: column nowrap;
     row-gap: 60px;
   }
@@ -811,11 +808,12 @@ h2 {
     bottom: auto;
   }
   .hero article:last-of-type img {
-    position: fixed;
+    margin-left: 0;
   }
   .about {
     flex-flow: column nowrap;
     padding: 30px;
+    padding-top: calc(3*60px);
     row-gap: 60px;
   }
   .experience {
@@ -907,9 +905,6 @@ h2 {
   }
   footer article:last-of-type {
     flex: 0 0 100%;
-  }
-  section {
-    margin-bottom: calc(3 * 60px);
   }
 }
 
