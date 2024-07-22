@@ -23,7 +23,6 @@
     }
     p {
       margin-left: 0;
-      
     }
   }
 
@@ -47,10 +46,18 @@
   .about {
     flex-flow: column nowrap;
     row-gap: $xh;
+    article {
+      flex-flow: column nowrap;
+      p{
+        &:first-of-type{
+          flex: 0 0 100%;
+          max-width: 80px;
+        }
+      }
+    }
   }
 
   .experience {
-    
     article {
       ul {
         min-width: 80%;
@@ -70,19 +77,19 @@
     article {
       &:last-of-type {
         width: 100%;
-        
+
         svg {
           display: none;
         }
       }
     }
   }
-  .training{
-    article{
-      &:last-of-type{
-        div{
+  .training {
+    article {
+      &:last-of-type {
+        div {
           width: 100%;
-          svg[data-direction]{
+          svg[data-direction] {
             display: none;
           }
         }

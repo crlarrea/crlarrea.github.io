@@ -58,6 +58,7 @@ header {
   display: flex;
   padding-left: 60px;
   padding-right: 60px;
+  padding-bottom: 60px;
 }
 
 nav {
@@ -749,6 +750,13 @@ h2 {
   .about {
     flex-flow: column nowrap;
     row-gap: 60px;
+  }
+  .about article {
+    flex-flow: column nowrap;
+  }
+  .about article p:first-of-type {
+    flex: 0 0 100%;
+    max-width: 80px;
   }
   .experience article ul {
     min-width: 80%;
