@@ -20,8 +20,8 @@ export const Hero = () => {
         </a>
       </article>
       <article>
-        <img src={photo} alt="me" fetchpriority="high" />
-        <link rel="preload" fetchpriority="high" as="image" href={photo} type="image/webp"/>
+        {/* <img src={photo} alt="me" fetchpriority="high" /> */}
+
 
         <ul>
           <li></li>

@@ -44,6 +44,7 @@ export const Experience = () => {
                       </span>
 
                       <h3>{capitalize(entry.title)}</h3>
+                      <p>{capitalize(entry.company)}</p>
                       <p>
                         {capitalize(entry.city)}, {entry.country.toUpperCase()}
                       </p>
