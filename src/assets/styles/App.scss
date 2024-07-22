@@ -177,7 +177,7 @@ nav {
 .about {
   padding: $xh;
   padding-top: calc(3 *#{$xh});
-  background-color: rgba($turquoise,0.1);
+  background-color: rgba($turquoise, 0.1);
   margin: {
     // top: calc(7 *#{$xh});
     bottom: calc(5 *#{$xh});
@@ -333,6 +333,7 @@ nav {
   }
 
   row-gap: $xh;
+
   article {
     &:first-of-type {
       h2 {
@@ -345,6 +346,10 @@ nav {
       justify-content: center;
       column-gap: $m;
       row-gap: $m;
+      // background-color: rgba($turquoise,0.2);
+      
+      
+
       a {
         position: relative;
         display: flex;
@@ -354,6 +359,8 @@ nav {
         align-items: flex-start;
         flex: 1 1 20%;
         // padding: $m;
+        box-shadow: 0 0 150px rgba($turquoise,0.2);
+        z-index: 1;
 
         aspect-ratio: 1;
         border-radius: $xxs;
