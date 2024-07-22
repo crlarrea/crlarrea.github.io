@@ -147,7 +147,7 @@ nav {
         list-style-type: none;
         position: absolute;
         right: $xh;
-        bottom: 0;
+        top: 10%;
         z-index: 1;
         li {
           &:first-of-type {
