@@ -758,6 +758,9 @@ h2 {
     flex: 0 0 100%;
     max-width: 80px;
   }
+  .about article:last-of-type div {
+    width: 70%;
+  }
   .experience article ul {
     min-width: 80%;
   }
