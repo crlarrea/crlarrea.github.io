@@ -20,7 +20,7 @@ export const Hero = () => {
         </a>
       </article>
       <article>
-        {/* <img src={photo} alt="me" fetchpriority="high" /> */}
+        <img src={photo} alt="me" fetchpriority="high" />
 
 
         <ul>
