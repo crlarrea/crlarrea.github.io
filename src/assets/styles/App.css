@@ -157,7 +157,7 @@ nav ul li a:hover {
 .hero article:last-of-type img {
   width: 100%;
   margin-left: -10%;
-  filter: grayscale(1) brightness(0.5) drop-shadow(0 0 60px rgba(128, 255, 219, 0.2));
+  filter: grayscale(1) brightness(0.5);
 }
 .hero article:last-of-type ul {
   display: flex;
