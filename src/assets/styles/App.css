@@ -871,6 +871,7 @@ h2 {
   }
   .projects article:last-of-type a {
     flex: 0 0 100%;
+    box-shadow: unset;
   }
   .projects article:last-of-type a img {
     transform: scale(1.5);
