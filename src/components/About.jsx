@@ -16,20 +16,15 @@ export const About = () => {
             <h2>about</h2>
             <p></p>
             <p>
-              Welcome to my corner of the web! I'm a Data Analytics Engineer
-              with a passion for{" "}
-              <span>web development and customer data platforms</span>. My
-              journey began in the world of science, where I honed my analytical
-              skills and curiosity.
+              My journey began in the world of science, where I honed my
+              analytical skills and curiosity. Today, I channel that expertise
+              into crafting insightful, data-driven
+              <span>solutions that empower businesses</span>. I blend technical
+              prowess with a love for innovation, always eager to explore new
+              challenges and opportunities.
             </p>
             <p>
-              Today, I channel that expertise into crafting insightful,
-              data-driven <span>solutions that empower businesses</span> to
-              thrive. I blend technical prowess with a love for innovation,
-              always eager to explore new challenges and opportunities.
-            </p>
-            <p>
-              Join me as I navigate the dynamic intersection of 
+              Join me as I navigate the dynamic intersection of
               <span> web technologies and data</span>, driven by a commitment to
               excellence and a zest for discovery.
             </p>

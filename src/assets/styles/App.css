@@ -223,7 +223,8 @@ nav ul li a:hover {
 .about article:last-of-type {
   align-items: flex-end;
 }
-.about article:last-of-type svg {
+.about article:last-of-type div {
+  flex: 0 0 70%;
   filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.5));
 }
 
