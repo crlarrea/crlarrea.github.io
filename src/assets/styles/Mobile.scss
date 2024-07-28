@@ -44,12 +44,12 @@
       &:last-of-type {
         ul {
           right: $xxl;
-          bottom: auto;
+          bottom: $xh;
           // position:fixed;
         }
         img {
           margin-left: 0;
-        // left: $xxl;
+          // left: $xxl;
           // right:0;
 
           // position: fixed;
@@ -62,9 +62,13 @@
   .about {
     flex-flow: column nowrap;
     padding: $xxl;
-    padding-top: calc(3*#{$xh});
+    padding-top: calc(3 *#{$xh});
     row-gap: $xh;
-    
+    article {
+      &:last-of-type {
+        justify-content: center;
+      }
+    }
   }
 
   .experience {
@@ -112,7 +116,6 @@
           flex: 0 0 100%;
           box-shadow: unset;
 
-
           img {
             transform: scale(1.5);
             filter: brightness(0.4);
@@ -129,6 +132,10 @@
 
   .publications,
   .training {
+    margin: {
+      top: xh;
+      bottom: $xh;
+    }
     max-width: 100vw;
     padding: $m;
 

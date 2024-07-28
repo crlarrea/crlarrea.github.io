@@ -18,8 +18,7 @@ export const About = () => {
             <p>
               My journey began in the world of science, where I honed my
               analytical skills and curiosity. Today, I channel that expertise
-              into crafting insightful, data-driven
-              <span>solutions that empower businesses</span>. I blend technical
+              into crafting insightful, data-driven <span>solutions that empower businesses</span>. I blend technical
               prowess with a love for innovation, always eager to explore new
               challenges and opportunities.
             </p>
