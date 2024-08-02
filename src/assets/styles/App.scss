@@ -63,6 +63,7 @@ nav {
     top: 40%;
     display: block;
     height: $s;
+    width: $s;
     aspect-ratio: 1;
 
     border-radius: 100%;
@@ -216,7 +217,7 @@ nav {
 
       div {
         flex: 0 0 70%;
-        filter: drop-shadow(0 0 $xxs rgba($white, 0.5));
+        filter: drop-shadow(0 0 $xxs rgba($white, 0.3));
       }
     }
   }

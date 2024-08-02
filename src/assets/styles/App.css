@@ -95,6 +95,7 @@ nav ul li a:hover {
   top: 40%;
   display: block;
   height: 14px;
+  width: 14px;
   aspect-ratio: 1;
   border-radius: 100%;
 }
@@ -225,7 +226,7 @@ nav ul li a:hover {
 }
 .about article:last-of-type div {
   flex: 0 0 70%;
-  filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.5));
+  filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.3));
 }
 
 .experience {
