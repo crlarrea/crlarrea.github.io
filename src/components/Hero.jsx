@@ -14,7 +14,7 @@ export const Hero = () => {
     <section className="hero">
       <article>
         <h1>christian larrea</h1>
-        <p>data analytics engineer and web development enthusiast.</p>
+        <p>data analytics and web development engineer.</p>
         <a href={cv} download="christian_larrea.pdf" className="secondary-btn">
           download CV
         </a>
