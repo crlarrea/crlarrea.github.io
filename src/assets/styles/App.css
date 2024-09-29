@@ -352,6 +352,10 @@ nav ul li a:hover {
   text-decoration: none;
   color: #ffffff;
 }
+.projects article:last-of-type a img {
+  width: 100%;
+  object-fit: cover;
+}
 .projects article:last-of-type a:hover img {
   transform: scale(1.5);
   filter: brightness(0.4);

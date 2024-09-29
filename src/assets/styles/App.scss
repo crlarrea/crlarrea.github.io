@@ -138,8 +138,8 @@ nav {
         width: 100%;
         margin-left: -10%;
 
-        filter: grayscale(1) brightness(0.5)
-          // drop-shadow(0 0 $xh rgba($turquoise, 0.2));
+        filter: grayscale(1) brightness(0.5);
+        // drop-shadow(0 0 $xh rgba($turquoise, 0.2));
       }
       ul {
         display: flex;
@@ -180,7 +180,7 @@ nav {
   padding: $xh;
   padding-top: calc(3 *#{$xh});
   background-color: rgba($turquoise, 0.1);
-  
+
   margin: {
     // top: calc(7 *#{$xh});
     bottom: calc(5 *#{$xh});
@@ -351,8 +351,6 @@ nav {
       column-gap: $m;
       row-gap: $m;
       // background-color: rgba($turquoise,0.2);
-      
-      
 
       a {
         position: relative;
@@ -363,7 +361,7 @@ nav {
         align-items: flex-start;
         flex: 1 1 20%;
         // padding: $m;
-        box-shadow: 0 0 150px rgba($turquoise,0.2);
+        box-shadow: 0 0 150px rgba($turquoise, 0.2);
         z-index: 1;
 
         aspect-ratio: 1;
@@ -374,7 +372,10 @@ nav {
           decoration: none;
         }
         color: $white;
-
+        img{
+          width: 100%;
+          object-fit: cover;
+        }
         &:hover {
           img {
             transform: scale(1.5);
