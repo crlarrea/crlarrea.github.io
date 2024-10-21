@@ -155,11 +155,11 @@ nav ul li a:hover {
 .hero article:last-of-type {
   position: relative;
   justify-content: flex-end;
+  overflow: hidden;
 }
 .hero article:last-of-type img {
-  width: 100%;
-  margin-left: -10%;
-  filter: grayscale(1) brightness(0.5);
+  width: 80%;
+  filter: grayscale(1) brightness(0.7);
 }
 .hero article:last-of-type ul {
   display: flex;
@@ -933,4 +933,4 @@ h2 {
   }
 }
 
-/*# sourceMappingURL=App.css.map */
+/*# sourceMappingURL=app.css.map */

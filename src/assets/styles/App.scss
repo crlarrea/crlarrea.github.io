@@ -133,12 +133,14 @@ nav {
     &:last-of-type {
       position: relative;
       justify-content: flex-end;
+      overflow: hidden;
       img {
         // position: absolute;
-        width: 100%;
-        margin-left: -10%;
+        width: 80%;
 
-        filter: grayscale(1) brightness(0.5);
+        filter: grayscale(1) brightness(0.7);
+        // clip-path:  polygon(0 0, 100% 0, 100% 85%, 0 85%);
+
         // drop-shadow(0 0 $xh rgba($turquoise, 0.2));
       }
       ul {
@@ -372,7 +374,7 @@ nav {
           decoration: none;
         }
         color: $white;
-        img{
+        img {
           width: 100%;
           object-fit: cover;
         }
