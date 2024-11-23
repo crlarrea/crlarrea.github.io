@@ -743,15 +743,14 @@ h2 {
     margin-left: 0;
   }
   .hero article:first-of-type {
-    flex: 0 0 70%;
-    padding: 60px;
+    flex: 1 1 40%;
+    padding: 48px;
   }
   .hero article:last-of-type {
-    flex: 0 0 30%;
+    flex: 1 1 30%;
   }
   .hero article:last-of-type img {
-    margin-left: -80%;
-    width: 150%;
+    object-fit: cover;
   }
   .about {
     flex-flow: column nowrap;
@@ -933,4 +932,4 @@ h2 {
   }
 }
 
-/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=App.css.map */

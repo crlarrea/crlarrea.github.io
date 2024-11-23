@@ -29,15 +29,13 @@
   .hero {
     article {
       &:first-of-type {
-        flex: 0 0 70%;
-        padding: $xh;
+        flex: 1 1 40%;
+        padding: $h;
       }
       &:last-of-type {
-        flex: 0 0 30%;
+        flex: 1 1 30%;
         img {
-          margin-left: -80%;
-          width: 150%;
-          // display: none;
+          object-fit: cover;
         }
       }
     }
@@ -48,17 +46,16 @@
     row-gap: $xh;
     article {
       flex-flow: column nowrap;
-      p{
-        &:first-of-type{
+      p {
+        &:first-of-type {
           flex: 0 0 100%;
           max-width: 80px;
         }
       }
-      &:last-of-type{
-        
-       div{
-        width: 70%;
-       }
+      &:last-of-type {
+        div {
+          width: 70%;
+        }
       }
     }
   }
