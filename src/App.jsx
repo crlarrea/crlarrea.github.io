@@ -13,19 +13,21 @@ function App() {
   return (
     <>
       <header>
-        <OpenToWork />
-        <Nav />
+        {/* <OpenToWork />
+        <Nav /> */}
       </header>
       <main>
-        <Hero />
+        <p>Exciting changes are just around the corner! 🚀</p>
+        <p>Hold on tight.</p>
+        {/* <Hero />
         <About />
         <Experience />
         <Projects />
         <Publications />
-        <Training />
+        <Training /> */}
       </main>
       <footer>
-        <Footer />
+        {/* <Footer /> */}
       </footer>
     </>
   );
