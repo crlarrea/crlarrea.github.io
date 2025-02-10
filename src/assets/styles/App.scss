@@ -1,806 +1,827 @@
 @import "UISystem";
 
-body {
-  background-color: $gray900;
-  color: $white;
-  font: {
-    family: "Nunito Light";
-    size: $l;
-  }
-}
+// body {
+//   background-color: $gray900;
+//   color: $white;
+//   font: {
+//     family: "Nunito Light";
+//     size: $l;
+//   }
+// }
+
+// #root {
+//   background-color: $gray600;
+//   border: 2px solid rgba($turquoise, 0.3);
+//   filter: drop-shadow(0 0 $s rgba($turquoise, 0.3));
+// }
+
+// header {
+//   display: flex;
+//   padding: {
+//     left: $xh;
+//     right: $xh;
+//     bottom: $xh;
+//   }
+// }
+// nav {
+//   padding: $h;
+//   flex: 1 1 100%;
+//   display: flex;
+//   justify-content: center;
+//   font: {
+//     family: "Nunito Semi Bold";
+//   }
+
+//   ul {
+//     list-style-type: none;
+//     flex: 0 1 50%;
+//     display: flex;
+//     justify-content: space-evenly;
+//     li {
+//       a {
+//         transition: all 0.3s;
+//         color: $white;
+//         text: {
+//           decoration: none;
+//           transform: capitalize;
+//         }
+//         &:hover {
+//           color: $turquoise;
+//           opacity: 1;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .open-to-work {
+//   padding-top: $h;
+//   flex: 0 0 20%;
+//   position: relative;
+//   span {
+//     position: absolute;
+//     top: 40%;
+//     display: block;
+//     height: $s;
+//     width: $s;
+//     aspect-ratio: 1;
+
+//     border-radius: 100%;
+
+//     &:first-of-type {
+//       background-color: $turquoise;
+//     }
+//     &:nth-of-type(2) {
+//       border: 3px solid $turquoise;
+//       animation: scaleUp 4s linear 0s infinite forwards;
+//     }
+//     &:nth-of-type(3) {
+//       background-color: $turquoise;
+//       animation: scaleUp 4s ease-out 0s infinite forwards;
+//     }
+//   }
+
+//   p {
+//     margin-left: $xxl;
+
+//     text: {
+//       transform: uppercase;
+//     }
+//     font: {
+//       size: $s;
+//     }
+//   }
+// }
+
+// @keyframes scaleUp {
+//   0% {
+//     transform: scale(0.7);
+//   }
+//   100% {
+//     transform: scale(2.7);
+//     opacity: 0;
+//   }
+// }
+// .active {
+//   color: $turquoise;
+// }
+// .inactive {
+//   color: $white;
+// }
+
+// .hero {
+//   display: flex;
+//   article {
+//     display: flex;
+//     flex-flow: column nowrap;
+//     flex: 0 0 50%;
+//     &:first-of-type {
+//       z-index: 1;
+//       padding-top: calc(3 *#{$xh});
+//       padding-left: calc(2 *#{$xh});
+//       row-gap: $xxs;
+//       p {
+//         font: {
+//           size: $xxl;
+//         }
+//         text: {
+//           transform: capitalize;
+//         }
+//         max-width: 25ch;
+//       }
+//     }
+//     &:last-of-type {
+//       position: relative;
+//       justify-content: flex-end;
+//       overflow: hidden;
+//       img {
+//         // position: absolute;
+//         width: 80%;
+
+//         filter: grayscale(1) brightness(0.7);
+//         // clip-path:  polygon(0 0, 100% 0, 100% 85%, 0 85%);
+
+//         // drop-shadow(0 0 $xh rgba($turquoise, 0.2));
+//       }
+//       ul {
+//         display: flex;
+//         flex-flow: column nowrap;
+//         align-items: center;
+//         row-gap: $s;
+//         list-style-type: none;
+//         position: absolute;
+//         right: $xh;
+//         top: 10%;
+//         z-index: 1;
+//         li {
+//           &:first-of-type {
+//             background-color: $turquoise;
+//             width: 1px;
+//             height: 120px;
+//             margin-bottom: $xl;
+//           }
+//           a {
+//             display: block;
+//             font: {
+//               size: $xl;
+//             }
+//             color: $white;
+//             &:hover {
+//               transition: all 0.3s;
+//               color: $turquoise;
+//               transform: scale(1.3);
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .about {
+//   padding: $xh;
+//   padding-top: calc(3 *#{$xh});
+//   background-color: rgba($turquoise, 0.1);
+
+//   margin: {
+//     // top: calc(7 *#{$xh});
+//     bottom: calc(5 *#{$xh});
+//   }
+
+//   display: flex;
+//   column-gap: $h;
+//   article {
+//     flex: 0 0 50%;
+//     display: flex;
+//     flex-flow: row wrap;
+
+//     &:first-of-type {
+//       row-gap: $xl;
+//       h2 {
+//         flex: 0 0 100%;
+//       }
+//       p {
+//         max-width: 50ch;
+//         text-align: justify;
+//         &:first-of-type {
+//           width: $h;
+//           border-top: 2px solid $turquoise;
+//           margin-right: $m;
+//           margin-top: $xs;
+//         }
+//         span {
+//           color: $turquoise;
+//         }
+//       }
+//     }
+//     &:last-of-type {
+//       align-items: flex-end;
+
+//       div {
+//         flex: 0 0 70%;
+//         filter: drop-shadow(0 0 $xxs rgba($white, 0.3));
+//       }
+//     }
+//   }
+// }
+// .experience {
+//   padding: $xh;
+//   // background-color: $gray500;
+//   article {
+//     display: flex;
+//     flex-flow: column nowrap;
+//     align-items: center;
+//     row-gap: $h;
+//     h2 {
+//       align-self: flex-start;
+//     }
+//     ul {
+//       position: relative;
+//       border-left: 2px solid $gray400;
+//       display: flex;
+//       flex-flow: column nowrap;
+//       row-gap: $xh;
+//       list-style-type: none;
+//       margin-left: $xh;
+//       min-width: 60%;
+
+//       li {
+//         details {
+//           cursor: pointer;
+//           margin-left: $xxl;
+//           &[open] {
+//             h3 {
+//               color: $turquoise;
+//             }
+//             div {
+//               div {
+//                 background-color: $turquoise;
+//                 filter: drop-shadow(0 0 $xxs $turquoise);
+//               }
+//             }
+//             span {
+//               border-color: $turquoise;
+//               color: $turquoise;
+//             }
+//           }
+//           summary {
+//             display: flex;
+//             flex-flow: column nowrap;
+//             &::-webkit-details-marker {
+//               display: none;
+//             }
+//             h3 {
+//               margin-top: -$xxs;
+//               font: {
+//                 family: "Nunito Bold";
+//               }
+//             }
+//             div {
+//               position: absolute;
+//               left: calc(#{-$m}/ 2);
+//               height: $s;
+//               aspect-ratio: 1;
+//               display: block;
+//               background-color: $gray400;
+//               border-radius: 100%;
+//               outline: 10px solid $gray600;
+
+//               div {
+//                 position: absolute;
+//                 outline: none;
+//                 top: 0;
+//                 left: 0;
+//               }
+//             }
+//             span {
+//               position: absolute;
+//               border: 2px solid rgba($gray400, 0.2);
+//               border-radius: $xl;
+//               padding: $xxs $s;
+//               left: calc(3 * #{-$xxl});
+//               margin-top: -10px;
+//               font: {
+//                 size: $xs;
+//               }
+//               color: $gray400;
+//             }
+//           }
+
+//           ul {
+//             margin-top: $m;
+//             border: none;
+//             row-gap: $xxs;
+
+//             margin-left: $xl;
+//             list-style-type: disc;
+
+//             li {
+//               &::marker {
+//                 color: $gray400;
+//               }
+//               max-width: 45ch;
+//               text-align: justify;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .projects {
+//   padding: $xh;
+//   display: flex;
+//   flex-flow: column nowrap;
+//   margin: {
+//     top: calc(3 *#{$xh});
+//     bottom: calc(3 *#{$xh});
+//   }
+
+//   row-gap: $xh;
+
+//   article {
+//     &:first-of-type {
+//       h2 {
+//         text-align: center;
+//       }
+//     }
+//     &:last-of-type {
+//       display: inherit;
+//       flex-flow: row wrap;
+//       justify-content: center;
+//       column-gap: $m;
+//       row-gap: $m;
+//       // background-color: rgba($turquoise,0.2);
+
+//       a {
+//         position: relative;
+//         display: flex;
+//         row-gap: $xxs;
+//         flex-flow: column nowrap;
+//         justify-content: center;
+//         align-items: flex-start;
+//         flex: 1 1 20%;
+//         // padding: $m;
+//         box-shadow: 0 0 150px rgba($turquoise, 0.2);
+//         z-index: 1;
+
+//         aspect-ratio: 1;
+//         border-radius: $xxs;
+//         overflow: hidden;
+
+//         text: {
+//           decoration: none;
+//         }
+//         color: $white;
+//         img {
+//           width: 100%;
+//           object-fit: cover;
+//         }
+//         &:hover {
+//           img {
+//             transform: scale(1.5);
+//             filter: brightness(0.4);
+//           }
+//           h4,
+//           p,
+//           ul {
+//             visibility: visible;
+//           }
+//         }
+
+//         img {
+//           height: 100%;
+//           position: absolute;
+//           z-index: -1;
+
+//           transition: all 0.3s;
+//         }
+//         h4 {
+//           font: {
+//             size: $xxl;
+//             family: "Nunito Semi Bold";
+//           }
+//           visibility: hidden;
+//         }
+//         p {
+//           visibility: hidden;
+//         }
+//         ul {
+//           display: flex;
+//           flex-flow: row wrap;
+//           list-style-type: none;
+//           column-gap: $xxs;
+//           li {
+//             &:before {
+//               content: "#";
+//               color: $turquoise;
+//             }
+//           }
+//           visibility: hidden;
+//         }
+//         h4,
+//         ul,
+//         p {
+//           padding: 0 $m;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .publications {
+//   padding: $xh;
+//   display: flex;
+//   flex-flow: column nowrap;
+//   align-items: center;
+//   row-gap: $xh;
+
+//   article {
+//     &:last-of-type {
+//       position: relative;
+//       width: calc(775px + #{2 * $m});
+//       display: flex;
+
+//       div {
+//         display: flex;
+//         flex-flow: row nowrap;
+//         column-gap: $m;
+//         overflow-x: scroll;
+//         scroll-snap-type: x mandatory;
+//         // scroll-snap-stop: always;
+//         // padding: 0 $m;
+
+//         @include hideScrollbar;
+//         a {
+//           scroll-snap-align: center;
+//           display: flex;
+//           flex-flow: column nowrap;
+//           row-gap: $xxs;
+//           padding: $xl;
+//           flex: 0 0 250px;
+//           color: $white;
+//           border: 2px solid $gray500;
+//           border-radius: $xxs;
+
+//           text: {
+//             decoration: none;
+//           }
+//           h3 {
+//             font: {
+//               family: "Nunito Semi Bold";
+//               size: $l;
+//             }
+//           }
+//           p {
+//             font: {
+//               size: $s;
+//               family: "Nunito Semi Bold";
+//             }
+//             color: $gray400;
+//           }
+//           ul {
+//             list-style-type: none;
+//             display: flex;
+//             flex-flow: row wrap;
+//             column-gap: $xxs;
+//             font: {
+//               size: $xs;
+//             }
+//             color: $gray400;
+//           }
+//         }
+//       }
+//       svg {
+//         position: absolute;
+
+//         color: rgba($turquoise, 0.4);
+//         height: 100%;
+//         cursor: pointer;
+//         font: {
+//           size: $xxxl;
+//         }
+//         bottom: 0;
+//         &:first-of-type {
+//           left: -$h;
+//         }
+//         &:last-of-type {
+//           right: -$h;
+//         }
+//         &:hover {
+//           color: $turquoise;
+//         }
+//       }
+//     }
+//   }
+// }
+// .training {
+//   padding: $xh;
+//   display: flex;
+//   flex-flow: column nowrap;
+//   row-gap: $xh;
+//   article {
+//     &:first-of-type {
+//       h2 {
+//         text-align: center;
+//       }
+//     }
+//     &:last-of-type {
+//       display: flex;
+//       flex-flow: column nowrap;
+//       align-items: center;
+//       position: relative;
+//       div {
+//         display: flex;
+//         flex-flow: row nowrap;
+
+//         column-gap: $m;
+//         overflow-x: scroll;
+//         scroll-snap-type: x mandatory;
+//         @include hideScrollbar;
+//         width: calc(800px + #{3 * $m});
+//         div {
+//           display: flex;
+//           flex-flow: column nowrap;
+//           padding: $m;
+//           border: 2px solid $gray500;
+//           border-radius: $xxs;
+//           flex: 0 0 200px;
+//           row-gap: $xxs;
+//           scroll-snap-align: start;
+//           span {
+//             color: $turquoise;
+//           }
+//           ul {
+//             list-style-type: none;
+//             display: flex;
+//             flex-flow: row wrap;
+//             column-gap: $xxs;
+//             font: {
+//               size: $s;
+//             }
+//             li {
+//               &:before {
+//                 content: "#";
+//                 color: $turquoise;
+//               }
+//             }
+//           }
+//           a {
+//             display: block;
+//             margin-top: auto;
+//             align-self: flex-end;
+//             font: {
+//               size: $xl;
+//             }
+//             color: $turquoise;
+//           }
+//         }
+//         svg[data-direction] {
+//           position: absolute;
+
+//           color: rgba($turquoise, 0.4);
+//           height: 100%;
+//           cursor: pointer;
+//           font: {
+//             size: $xxxl;
+//           }
+//           bottom: 0;
+//           &:first-of-type {
+//             left: $xh;
+//           }
+//           &:last-of-type {
+//             right: $xh;
+//           }
+//           &:hover {
+//             color: $turquoise;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// footer {
+//   position: relative;
+//   padding: $xh;
+//   display: flex;
+//   flex-flow: row wrap;
+//   row-gap: $xh;
+//   background-color: $gray500;
+//   background-color: $turquoise;
+//   border-bottom: {
+//     left-radius: $s;
+//     right-radius: $s;
+//   }
+//   article {
+//     flex: 1 0 50%;
+//     h2 {
+//       color: $gray900;
+//     }
+//     &:first-of-type {
+//       p {
+//         position: absolute;
+//         bottom: $m;
+//         left: $m;
+//         color: $gray900;
+//         text: {
+//           transform: uppercase;
+//         }
+//         font: {
+//           size: $xs;
+//         }
+//         writing-mode: vertical-lr;
+//         transform: scale(-1);
+//       }
+//     }
+//     &:last-of-type {
+//       flex: 0 0 min(50%, 350px, 100%);
+//       form {
+//         display: flex;
+//         flex-flow: column nowrap;
+//         row-gap: 0;
+//         position: relative;
+//         label {
+//           font: {
+//             size: $s;
+//           }
+//           color: $gray600;
+//           margin-top: $m;
+//           text: {
+//             transform: capitalize;
+//           }
+//         }
+//         input {
+//           background-color: transparent;
+//           border: none;
+//           border-bottom: 1px solid $gray900;
+//           outline: none;
+//           color: $gray900;
+//           padding: $xxs;
+//           &::placeholder {
+//             font: {
+//               family: "Nunito Light";
+//             }
+//           }
+//           font: {
+//             family: "Nunito Semi Bold";
+//           }
+//         }
+//         textarea {
+//           padding: $s;
+//           background-color: transparent;
+//           color: $gray900;
+//           resize: none;
+//           height: 150px;
+//           border: 1px solid $gray900;
+//           border-radius: $xxs;
+//           outline: none;
+//           &::placeholder {
+//             font: {
+//               family: "Nunito Light";
+//             }
+//           }
+//           font: {
+//             family: "Nunito Semi Bold";
+//           }
+//         }
+//         button[type="submit"] {
+//           align-self: flex-start;
+//           padding: $xs;
+//           display: inline-flex;
+//           justify-content: center;
+//           align-items: center;
+//           aspect-ratio: 1;
+//           border-radius: 100%;
+//           background-color: rgba($gray400, 0.5);
+//           font: {
+//             size: $m;
+//           }
+//           outline: none;
+//           border: none;
+//           color: $gray500;
+//           position: absolute;
+//           bottom: $xxs;
+//           right: $xxs;
+//           cursor: pointer;
+//           &:disabled {
+//             background-color: transparent;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// h1 {
+//   font: {
+//     size: $h;
+//     family: "Serif Semi Bold";
+//   }
+//   text: {
+//     transform: capitalize;
+//   }
+//   color: $turquoise;
+// }
+
+// h2 {
+//   font: {
+//     family: "Serif Semi Bold";
+//     size: $xxxl;
+//   }
+//   text: {
+//     transform: capitalize;
+//   }
+// }
+
+// .secondary-btn {
+//   color: $turquoise;
+//   border: 2px solid $turquoise;
+//   border-radius: $xxs;
+//   padding: $xxs $l;
+//   align-self: flex-start;
+//   margin-top: $xxxl;
+//   cursor: pointer;
+//   text: {
+//     decoration: none;
+//     transform: capitalize;
+//   }
+//   &:hover {
+//     transition: all 0.3s;
+//     filter: drop-shadow(0 0 $xs $turquoise);
+//     color: $white;
+//   }
+// }
+
+// .primary-btn {
+//   color: $blue;
+//   border: 2px solid $white;
+//   background-color: $turquoise;
+//   border-radius: $xxs;
+//   padding: $xxs $l;
+//   margin-top: $xxxl;
+//   display: flex;
+//   align-items: center;
+//   column-gap: $xxs;
+//   cursor: pointer;
+//   text: {
+//     decoration: none;
+//     transform: capitalize;
+//   }
+//   &:hover {
+//     transition: all 0.3s;
+//     filter: drop-shadow(0 0 $xs $turquoise);
+//   }
+// }
+
+// .highlight {
+//   background-color: $turquoise;
+// }
+
+// .spin {
+//   animation: spinAnimation 1s ease-in-out infinite forwards;
+// }
+
+// @keyframes spinAnimation {
+//   100% {
+//     transform: rotate(180deg);
+//   }
+// }
+
+// .fade-in {
+//   animation: fadeIn 1s ease-in;
+// }
+// @keyframes fadeIn {
+//   0% {
+//     opacity: 0;
+//     transform: translateY($xh);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }
+
+// @import "Tablet";
+// @import "Mobile";
 
 #root {
-  background-color: $gray600;
-  border: 2px solid rgba($turquoise, 0.3);
-  filter: drop-shadow(0 0 $s rgba($turquoise, 0.3));
-}
-
-header {
-  display: flex;
-  padding: {
-    left: $xh;
-    right: $xh;
-    bottom: $xh;
+  width: 100dvw;
+  height: 100dvh;
+  // border:1px solid red;
+  color: white;
+  font: {
+    family: "courier";
   }
-}
-nav {
-  padding: $h;
-  flex: 1 1 100%;
   display: flex;
   justify-content: center;
-  font: {
-    family: "Nunito Semi Bold";
-  }
-
-  ul {
-    list-style-type: none;
-    flex: 0 1 50%;
-    display: flex;
-    justify-content: space-evenly;
-    li {
-      a {
-        transition: all 0.3s;
-        color: $white;
-        text: {
-          decoration: none;
-          transform: capitalize;
-        }
-        &:hover {
-          color: $turquoise;
-          opacity: 1;
-        }
-      }
-    }
-  }
-}
-
-.open-to-work {
-  padding-top: $h;
-  flex: 0 0 20%;
-  position: relative;
-  span {
-    position: absolute;
-    top: 40%;
-    display: block;
-    height: $s;
-    width: $s;
-    aspect-ratio: 1;
-
-    border-radius: 100%;
-
-    &:first-of-type {
-      background-color: $turquoise;
-    }
-    &:nth-of-type(2) {
-      border: 3px solid $turquoise;
-      animation: scaleUp 4s linear 0s infinite forwards;
-    }
-    &:nth-of-type(3) {
-      background-color: $turquoise;
-      animation: scaleUp 4s ease-out 0s infinite forwards;
-    }
-  }
-
-  p {
-    margin-left: $xxl;
-
-    text: {
-      transform: uppercase;
-    }
-    font: {
-      size: $s;
-    }
-  }
-}
-
-@keyframes scaleUp {
-  0% {
-    transform: scale(0.7);
-  }
-  100% {
-    transform: scale(2.7);
-    opacity: 0;
-  }
-}
-.active {
-  color: $turquoise;
-}
-.inactive {
-  color: $white;
-}
-
-.hero {
-  display: flex;
-  article {
-    display: flex;
-    flex-flow: column nowrap;
-    flex: 0 0 50%;
-    &:first-of-type {
-      z-index: 1;
-      padding-top: calc(3 *#{$xh});
-      padding-left: calc(2 *#{$xh});
-      row-gap: $xxs;
-      p {
-        font: {
-          size: $xxl;
-        }
-        text: {
-          transform: capitalize;
-        }
-        max-width: 25ch;
-      }
-    }
-    &:last-of-type {
-      position: relative;
-      justify-content: flex-end;
-      overflow: hidden;
-      img {
-        // position: absolute;
-        width: 80%;
-
-        filter: grayscale(1) brightness(0.7);
-        // clip-path:  polygon(0 0, 100% 0, 100% 85%, 0 85%);
-
-        // drop-shadow(0 0 $xh rgba($turquoise, 0.2));
-      }
-      ul {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        row-gap: $s;
-        list-style-type: none;
-        position: absolute;
-        right: $xh;
-        top: 10%;
-        z-index: 1;
-        li {
-          &:first-of-type {
-            background-color: $turquoise;
-            width: 1px;
-            height: 120px;
-            margin-bottom: $xl;
-          }
-          a {
-            display: block;
-            font: {
-              size: $xl;
-            }
-            color: $white;
-            &:hover {
-              transition: all 0.3s;
-              color: $turquoise;
-              transform: scale(1.3);
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-.about {
-  padding: $xh;
-  padding-top: calc(3 *#{$xh});
-  background-color: rgba($turquoise, 0.1);
-
-  margin: {
-    // top: calc(7 *#{$xh});
-    bottom: calc(5 *#{$xh});
-  }
-
-  display: flex;
-  column-gap: $h;
-  article {
-    flex: 0 0 50%;
-    display: flex;
-    flex-flow: row wrap;
-
-    &:first-of-type {
-      row-gap: $xl;
-      h2 {
-        flex: 0 0 100%;
-      }
-      p {
-        max-width: 50ch;
-        text-align: justify;
-        &:first-of-type {
-          width: $h;
-          border-top: 2px solid $turquoise;
-          margin-right: $m;
-          margin-top: $xs;
-        }
-        span {
-          color: $turquoise;
-        }
-      }
-    }
-    &:last-of-type {
-      align-items: flex-end;
-
-      div {
-        flex: 0 0 70%;
-        filter: drop-shadow(0 0 $xxs rgba($white, 0.3));
-      }
-    }
-  }
-}
-.experience {
-  padding: $xh;
-  // background-color: $gray500;
-  article {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    row-gap: $h;
-    h2 {
-      align-self: flex-start;
-    }
-    ul {
-      position: relative;
-      border-left: 2px solid $gray400;
-      display: flex;
-      flex-flow: column nowrap;
-      row-gap: $xh;
-      list-style-type: none;
-      margin-left: $xh;
-      min-width: 60%;
-
-      li {
-        details {
-          cursor: pointer;
-          margin-left: $xxl;
-          &[open] {
-            h3 {
-              color: $turquoise;
-            }
-            div {
-              div {
-                background-color: $turquoise;
-                filter: drop-shadow(0 0 $xxs $turquoise);
-              }
-            }
-            span {
-              border-color: $turquoise;
-              color: $turquoise;
-            }
-          }
-          summary {
-            display: flex;
-            flex-flow: column nowrap;
-            &::-webkit-details-marker {
-              display: none;
-            }
-            h3 {
-              margin-top: -$xxs;
-              font: {
-                family: "Nunito Bold";
-              }
-            }
-            div {
-              position: absolute;
-              left: calc(#{-$m}/ 2);
-              height: $s;
-              aspect-ratio: 1;
-              display: block;
-              background-color: $gray400;
-              border-radius: 100%;
-              outline: 10px solid $gray600;
-
-              div {
-                position: absolute;
-                outline: none;
-                top: 0;
-                left: 0;
-              }
-            }
-            span {
-              position: absolute;
-              border: 2px solid rgba($gray400, 0.2);
-              border-radius: $xl;
-              padding: $xxs $s;
-              left: calc(3 * #{-$xxl});
-              margin-top: -10px;
-              font: {
-                size: $xs;
-              }
-              color: $gray400;
-            }
-          }
-
-          ul {
-            margin-top: $m;
-            border: none;
-            row-gap: $xxs;
-
-            margin-left: $xl;
-            list-style-type: disc;
-
-            li {
-              &::marker {
-                color: $gray400;
-              }
-              max-width: 45ch;
-              text-align: justify;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-.projects {
-  padding: $xh;
-  display: flex;
-  flex-flow: column nowrap;
-  margin: {
-    top: calc(3 *#{$xh});
-    bottom: calc(3 *#{$xh});
-  }
-
-  row-gap: $xh;
-
-  article {
-    &:first-of-type {
-      h2 {
-        text-align: center;
-      }
-    }
-    &:last-of-type {
-      display: inherit;
-      flex-flow: row wrap;
-      justify-content: center;
-      column-gap: $m;
-      row-gap: $m;
-      // background-color: rgba($turquoise,0.2);
-
-      a {
-        position: relative;
-        display: flex;
-        row-gap: $xxs;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: flex-start;
-        flex: 1 1 20%;
-        // padding: $m;
-        box-shadow: 0 0 150px rgba($turquoise, 0.2);
-        z-index: 1;
-
-        aspect-ratio: 1;
-        border-radius: $xxs;
-        overflow: hidden;
-
-        text: {
-          decoration: none;
-        }
-        color: $white;
-        img {
-          width: 100%;
-          object-fit: cover;
-        }
-        &:hover {
-          img {
-            transform: scale(1.5);
-            filter: brightness(0.4);
-          }
-          h4,
-          p,
-          ul {
-            visibility: visible;
-          }
-        }
-
-        img {
-          height: 100%;
-          position: absolute;
-          z-index: -1;
-
-          transition: all 0.3s;
-        }
-        h4 {
-          font: {
-            size: $xxl;
-            family: "Nunito Semi Bold";
-          }
-          visibility: hidden;
-        }
-        p {
-          visibility: hidden;
-        }
-        ul {
-          display: flex;
-          flex-flow: row wrap;
-          list-style-type: none;
-          column-gap: $xxs;
-          li {
-            &:before {
-              content: "#";
-              color: $turquoise;
-            }
-          }
-          visibility: hidden;
-        }
-        h4,
-        ul,
-        p {
-          padding: 0 $m;
-        }
-      }
-    }
-  }
-}
-
-.publications {
-  padding: $xh;
-  display: flex;
-  flex-flow: column nowrap;
+  
   align-items: center;
-  row-gap: $xh;
-
-  article {
-    &:last-of-type {
-      position: relative;
-      width: calc(775px + #{2 * $m});
-      display: flex;
-
-      div {
-        display: flex;
-        flex-flow: row nowrap;
-        column-gap: $m;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        // scroll-snap-stop: always;
-        // padding: 0 $m;
-
-        @include hideScrollbar;
-        a {
-          scroll-snap-align: center;
-          display: flex;
-          flex-flow: column nowrap;
-          row-gap: $xxs;
-          padding: $xl;
-          flex: 0 0 250px;
-          color: $white;
-          border: 2px solid $gray500;
-          border-radius: $xxs;
-
-          text: {
-            decoration: none;
-          }
-          h3 {
-            font: {
-              family: "Nunito Semi Bold";
-              size: $l;
-            }
-          }
-          p {
-            font: {
-              size: $s;
-              family: "Nunito Semi Bold";
-            }
-            color: $gray400;
-          }
-          ul {
-            list-style-type: none;
-            display: flex;
-            flex-flow: row wrap;
-            column-gap: $xxs;
-            font: {
-              size: $xs;
-            }
-            color: $gray400;
-          }
-        }
-      }
-      svg {
-        position: absolute;
-
-        color: rgba($turquoise, 0.4);
-        height: 100%;
-        cursor: pointer;
-        font: {
-          size: $xxxl;
-        }
-        bottom: 0;
-        &:first-of-type {
-          left: -$h;
-        }
-        &:last-of-type {
-          right: -$h;
-        }
-        &:hover {
-          color: $turquoise;
-        }
-      }
-    }
-  }
+  background-color: black;
+  text-align: center;
 }
-.training {
-  padding: $xh;
-  display: flex;
+main{
+  display: inherit;
   flex-flow: column nowrap;
-  row-gap: $xh;
-  article {
-    &:first-of-type {
-      h2 {
-        text-align: center;
-      }
-    }
-    &:last-of-type {
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: center;
-      position: relative;
-      div {
-        display: flex;
-        flex-flow: row nowrap;
-
-        column-gap: $m;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        @include hideScrollbar;
-        width: calc(800px + #{3 * $m});
-        div {
-          display: flex;
-          flex-flow: column nowrap;
-          padding: $m;
-          border: 2px solid $gray500;
-          border-radius: $xxs;
-          flex: 0 0 200px;
-          row-gap: $xxs;
-          scroll-snap-align: start;
-          span {
-            color: $turquoise;
-          }
-          ul {
-            list-style-type: none;
-            display: flex;
-            flex-flow: row wrap;
-            column-gap: $xxs;
-            font: {
-              size: $s;
-            }
-            li {
-              &:before {
-                content: "#";
-                color: $turquoise;
-              }
-            }
-          }
-          a {
-            display: block;
-            margin-top: auto;
-            align-self: flex-end;
-            font: {
-              size: $xl;
-            }
-            color: $turquoise;
-          }
-        }
-        svg[data-direction] {
-          position: absolute;
-
-          color: rgba($turquoise, 0.4);
-          height: 100%;
-          cursor: pointer;
-          font: {
-            size: $xxxl;
-          }
-          bottom: 0;
-          &:first-of-type {
-            left: $xh;
-          }
-          &:last-of-type {
-            right: $xh;
-          }
-          &:hover {
-            color: $turquoise;
-          }
-        }
-      }
-    }
-  }
+  row-gap: 1rem;
 }
-
-footer {
-  position: relative;
-  padding: $xh;
-  display: flex;
-  flex-flow: row wrap;
-  row-gap: $xh;
-  background-color: $gray500;
-  background-color: $turquoise;
-  border-bottom: {
-    left-radius: $s;
-    right-radius: $s;
-  }
-  article {
-    flex: 1 0 50%;
-    h2 {
-      color: $gray900;
-    }
-    &:first-of-type {
-      p {
-        position: absolute;
-        bottom: $m;
-        left: $m;
-        color: $gray900;
-        text: {
-          transform: uppercase;
-        }
-        font: {
-          size: $xs;
-        }
-        writing-mode: vertical-lr;
-        transform: scale(-1);
-      }
-    }
-    &:last-of-type {
-      flex: 0 0 min(50%, 350px, 100%);
-      form {
-        display: flex;
-        flex-flow: column nowrap;
-        row-gap: 0;
-        position: relative;
-        label {
-          font: {
-            size: $s;
-          }
-          color: $gray600;
-          margin-top: $m;
-          text: {
-            transform: capitalize;
-          }
-        }
-        input {
-          background-color: transparent;
-          border: none;
-          border-bottom: 1px solid $gray900;
-          outline: none;
-          color: $gray900;
-          padding: $xxs;
-          &::placeholder {
-            font: {
-              family: "Nunito Light";
-            }
-          }
-          font: {
-            family: "Nunito Semi Bold";
-          }
-        }
-        textarea {
-          padding: $s;
-          background-color: transparent;
-          color: $gray900;
-          resize: none;
-          height: 150px;
-          border: 1px solid $gray900;
-          border-radius: $xxs;
-          outline: none;
-          &::placeholder {
-            font: {
-              family: "Nunito Light";
-            }
-          }
-          font: {
-            family: "Nunito Semi Bold";
-          }
-        }
-        button[type="submit"] {
-          align-self: flex-start;
-          padding: $xs;
-          display: inline-flex;
-          justify-content: center;
-          align-items: center;
-          aspect-ratio: 1;
-          border-radius: 100%;
-          background-color: rgba($gray400, 0.5);
-          font: {
-            size: $m;
-          }
-          outline: none;
-          border: none;
-          color: $gray500;
-          position: absolute;
-          bottom: $xxs;
-          right: $xxs;
-          cursor: pointer;
-          &:disabled {
-            background-color: transparent;
-          }
-        }
-      }
-    }
-  }
-}
-h1 {
-  font: {
-    size: $h;
-    family: "Serif Semi Bold";
-  }
-  text: {
-    transform: capitalize;
-  }
-  color: $turquoise;
-}
-
-h2 {
-  font: {
-    family: "Serif Semi Bold";
-    size: $xxxl;
-  }
-  text: {
-    transform: capitalize;
-  }
-}
-
-.secondary-btn {
-  color: $turquoise;
-  border: 2px solid $turquoise;
-  border-radius: $xxs;
-  padding: $xxs $l;
-  align-self: flex-start;
-  margin-top: $xxxl;
-  cursor: pointer;
-  text: {
-    decoration: none;
-    transform: capitalize;
-  }
-  &:hover {
-    transition: all 0.3s;
-    filter: drop-shadow(0 0 $xs $turquoise);
-    color: $white;
-  }
-}
-
-.primary-btn {
-  color: $blue;
-  border: 2px solid $white;
-  background-color: $turquoise;
-  border-radius: $xxs;
-  padding: $xxs $l;
-  margin-top: $xxxl;
-  display: flex;
-  align-items: center;
-  column-gap: $xxs;
-  cursor: pointer;
-  text: {
-    decoration: none;
-    transform: capitalize;
-  }
-  &:hover {
-    transition: all 0.3s;
-    filter: drop-shadow(0 0 $xs $turquoise);
-  }
-}
-
-.highlight {
-  background-color: $turquoise;
-}
-
-.spin {
-  animation: spinAnimation 1s ease-in-out infinite forwards;
-}
-
-@keyframes spinAnimation {
-  100% {
-    transform: rotate(180deg);
-  }
-}
-
-.fade-in {
-  animation: fadeIn 1s ease-in;
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY($xh);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@import "Tablet";
-@import "Mobile";
