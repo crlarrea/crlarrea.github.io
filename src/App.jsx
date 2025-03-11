@@ -10,6 +10,7 @@ function App() {
       <main>
         <p>Exciting changes are just around the corner!</p>
         <p>Hold on tight. 🚀</p>
+        <a href='https://biz-two.vercel.app'>sneak peek</a>
         {/* <Hero />
         <About />
         <Experience />
