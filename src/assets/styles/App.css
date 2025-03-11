@@ -45,6 +45,9 @@ html {
   background-color: black;
   text-align: center;
 }
+#root a {
+  color: white;
+}
 
 main {
   display: inherit;
